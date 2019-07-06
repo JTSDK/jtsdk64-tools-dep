@@ -2,24 +2,12 @@
 :: Name .........: make.cmd
 :: Project ......: JTSDK64 Tools Project
 :: Description ..: Windows Makefile (make.cmd)
-:: Project URL ..: https://github.com/ki7mt/jtsdk64-tools-scripts
+:: Project URL ..: https://github.com/ki7mt/jtsdk64-tools
 ::
 :: Author .......: Greg, Beam, KI7MT, <ki7mt@yahoo.com>
 :: Copyright ....: Copyright (C) 2013-2019 Greg Beam, KI7MT
 :: License ......: GPL-3
 ::
-:: make.cmd is free software: you can redistribute it and/or modify it
-:: under the terms of the GNU General Public License as published by the Free
-:: Software Foundation either version 3 of the License, or (at your option) any
-:: later version. 
-::
-:: make.cmd is distributed in the hope that it will be useful, but WITHOUT
-:: ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
-:: FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more
-:: details.
-::
-:: You should have received a copy of the GNU General Public License
-:: along with this program.  If not, see <http://www.gnu.org/licenses/>.
 ::-----------------------------------------------------------------------------::
 @ECHO OFF
 
@@ -29,14 +17,14 @@
 ::     twine
 ::     colorconsole
 ::
-:: NOTES: 
+:: NOTES:
 ::
 ::   For Package Requirments
 ::     If you have runtime package requirements, add the file "requirements.txt"
-::     to the root of the distribution. 
+::     to the root of the distribution.
 ::
 ::   For Development Requirements
-::     For development requirements, use the requirments-dex.txt      
+::     For development requirements, use the requirments-dex.txt
 
 :: Make File Variables
 SET app_name=jt64common
@@ -169,8 +157,8 @@ ECHO Plublishing Package: %app_name%
 twine upload %pypitest%
 
 :: If the esit status was not 0, for to test publish error
-IF %ERRORLEVEL% NEQ 0 ( 
-   GOTO _TEST_PUBLISH_ERROR 
+IF %ERRORLEVEL% NEQ 0 (
+   GOTO _TEST_PUBLISH_ERROR
 )
 ECHO.
 ECHO To install ^[ %app_name% ^] from ^( test.pypi.org ^)^, run the
@@ -193,8 +181,8 @@ ECHO Plublishing Package: %app_name%
 twine upload %pypiprod%
 
 :: If the exit status was not 0, goto publish error
-IF %ERRORLEVEL% NEQ 0 ( 
-   GOTO _PUBLISH_ERROR 
+IF %ERRORLEVEL% NEQ 0 (
+   GOTO _PUBLISH_ERROR
 )
 ECHO.
 ECHO To install ^[ %app_name% ^] from ^( pypi.org ^)^, run the

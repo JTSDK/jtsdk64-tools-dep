@@ -5,8 +5,8 @@
 PROGRAM	:= jt64common
 AUTHOR	:= Greg Beam, KI7MT
 LICENSE	:= GPLv3
-BUGS	:= https://github.com/KI7MT/python-pypi-packages/issues
-WEB	:= https://github.com/KI7MT/python-pypi-packages
+BUGS	:= https://github.com/KI7MT/jtsdk64-tools/issues
+WEB	:= https://github.com/KI7MT/jtsdk64-tools
 
 # make programs
 PYTHON	:= $(shell which python)

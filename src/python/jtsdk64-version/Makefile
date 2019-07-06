@@ -5,8 +5,8 @@
 PROGRAM	:= jt64version
 AUTHOR	:= Greg Beam, KI7MT
 LICENSE	:= GPLv3
-BUGS	:= https://github.com/KI7MT/jtsdk64-tools-scripts/issues
-WEB	:= https://github.com/KI7MT/jtsdk64-tools-scripts
+BUGS	:= https://github.com/KI7MT/jtsdk64-tools/issues
+WEB	:= https://github.com/KI7MT/jtsdk64-tools
 
 # make programs
 PYTHON	:= $(shell which python)

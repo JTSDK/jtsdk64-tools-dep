@@ -18,8 +18,7 @@ setuptools.setup(
 
     python_requires='>=3.5.*',
     project_urls={
-        'Packaging tutorial': 'https://packaging.python.org/tutorials/distributing-packages/',
-        'jt64env source': 'https://github.com/KI7MT/jtsdk64-tools-scripts',
+        'Documentation': 'https://ki7mt.github.io/jtsdk-tools/',
     },
     packages=setuptools.find_packages(),
     install_requires=['colorconsole', 'jt64common'],
@@ -39,5 +38,5 @@ setuptools.setup(
         "Programming Language :: Python :: 3.6",
         "Programming Language :: Python :: 3.7",
         ],
-    url='https://github.com/KI7MT/jtsdk64-tools-scripts',
+    url='https://github.com/KI7MT/jtsdk64-tools/tree/master/src/python/jtsdk64-environment',
 )

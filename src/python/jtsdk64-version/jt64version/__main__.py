@@ -56,7 +56,7 @@ def get_git_version():
 
 def get_libusb_version():
     """Get Libsub Version"""
-    base_path = os.environ['JTSDK_HOME']
+    base_path = os.environ['JTSDK64_HOME']
     file_name = "libusb-1.0.def"
     file_path = os.path.join(base_path, "tools", "libusb", "1.0.22", file_name)
 
@@ -82,7 +82,7 @@ def get_pkgconfig_version():
 def get_psql_version():
     """Return PostgreSQL Version"""
     if os.environ['POSTGRES'] == "Not Installed":
-        ver = "Not Installed"   
+        ver = "Not Installed"
     else:
         output = cmd("psql --version")
         ver = " ".join(output.split()[2:3])
@@ -119,7 +119,7 @@ def get_gcc_version():
 
 
 def list_tcfiles():
-    file_path = os.path.join(os.environ["JTSDK_HOME"], "tools", "tcfiles")
+    file_path = os.path.join(os.environ["JTSDK64_HOME"], "tools", "tcfiles")
     files = os.listdir(file_path)
     return files
 
@@ -164,7 +164,7 @@ def main():
     print(f"   SQLite3       : {get_sqlite_version()}")
     print(f"   Subversion    : {get_subversion_version()}")
     print('''
- JTSDK64 Tools Version v3.1.0 Alpha
+ JTSDK64 Tools Version v3.1.0
  Copyright (C) 2013-2019, GPLv3, Greg Beam, KI7MT
  This is free software; There is NO warranty; not even
  for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.

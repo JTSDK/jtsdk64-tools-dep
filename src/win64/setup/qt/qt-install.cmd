@@ -67,7 +67,7 @@ GOTO INSTALL_SUMMARY
 :INSTALL_SUMMARY
 ECHO.
 ECHO -----------------------------------------------------
-ECHO  JTSDK64 Git Install Summary
+ECHO  JTSDK64 Qt Install Summary
 ECHO -----------------------------------------------------
 ECHO.
 ECHO  JTSDK64 Tools Qt Installaiton Complete. The following
