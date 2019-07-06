@@ -1,3 +1,5 @@
 # JTSDK64 Tools
 
-Initial readme file. Updates needed before release.
+UPDATE 2019-07-06
+- This project is being prepared for release. Documentation and final app updates
+will be posted when available.
