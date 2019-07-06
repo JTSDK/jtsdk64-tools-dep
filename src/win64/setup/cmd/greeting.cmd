@@ -10,7 +10,11 @@
 :: Copyright ....: Copyright (C) 2013-2019 Greg Beam, KI7MT
 :: License ......: GPL-3
 ::-----------------------------------------------------------------------------::
-CLS
+IF /I [%debug%]==[1] (
+    ECHO Running in Debug mode
+) ELSE (
+    CLS
+)
 ECHO --------------------------------------------
 ECHO  JTSDK64 Tools Setup v%version%
 ECHO --------------------------------------------

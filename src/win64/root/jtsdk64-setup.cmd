@@ -18,6 +18,10 @@ SET /P JTSDK64_VERSION=<%CD%\ver.jtsdk
 SET version=%JTSDK64_VERSION%
 TITLE JTSDK64 Tools Setup %version%
 
+:: Set a debug flag
+IF /I [%1]==[-d] (
+    SET debug=1
+)
 ::------------------------------------------------------------------------------
 :: GLOBAL ENVIRONMENT VARIABLES and PATHS
 ::------------------------------------------------------------------------------
