@@ -69,12 +69,6 @@ conda activate jtpy
 pip uninstall jt64gentc
 ```
 
-## Change Log
-
-### Version 0.0.10
-
-- Initial production release to [PyPi][].
-
 [Install Miniconda Python]: `https://ki7mt.github.io/jtsdk64-tools/`
 [JTSDK64-Tools]: `https://github.com/KI7MT/jtsdk64-tools`
 [test.pypi.org]: `https://test.pypi.org/project/jt64gentc/`

@@ -67,12 +67,6 @@ conda activate jtpy
 pip uninstall jt64env
 ```
 
-## Change Log
-
-### Version 0.0.10
-
-- Initial release to production to [PyPi Production][]
-
 [Install Miniconda Python]: `https://ki7mt.github.io/jtsdk64-tools/`
 [JTSDK64-Tools]: `https://github.com/KI7MT/jtsdk64-tools`
 [test.pypi.org]: `https://test.pypi.org/project/jt64env/`
