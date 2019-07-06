@@ -123,19 +123,24 @@ ECHO  Installing Scripts in JTPY
 ECHO ------------------------------
 ECHO.
 ECHO Python Dependencies
+ECHO ---------------------------------------
 python -m pip install --upgrade colorconsole
 ECHO.
 ECHO JT64 Common
-python -m pip install --upgrade -i https://test.pypi.org/simple/ jt64common
+ECHO ---------------------------------------
+python -m pip install --upgrade jt64common
 ECHO.
 ECHO JT64 Env
-python -m pip install --upgrade -i https://test.pypi.org/simple/ jt64env
+ECHO ---------------------------------------
+python -m pip install --upgrade jt64env
 ECHO.
 ECHO JT64 Version
-python -m pip install --upgrade -i https://test.pypi.org/simple/ jt64version
+ECHO ---------------------------------------
+python -m pip install --upgrade jt64version
 ECHO.
 ECHO JT64 Gentc
-python -m pip install --upgrade -i https://test.pypi.org/simple/ jt64gentc
+ECHO ---------------------------------------
+python -m pip install --upgrade jt64gentc
 GOTO INSTALL_SUMMARY
 
 :: INSTALL SUMMARY -------------------------------------------------------------
