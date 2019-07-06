@@ -57,10 +57,6 @@ pip install install --upgrade jt64gentc
       -v, --version    display module version
 ```
 
-| ![Application Versions](docs/images/jt64gentc.PNG?raw=true) |
-|:--:|
-| *JTSDK64 Generate Tool Chain Files* |
-
 ## Uninstall
 
 Open a condole, and type the following:

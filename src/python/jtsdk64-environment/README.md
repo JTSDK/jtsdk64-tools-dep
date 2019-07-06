@@ -3,7 +3,7 @@
 | Application Data ||
 | ---| --- |
 | Package             | `jt64env`
-| Version             | 0.0.10
+| Version             | 0.0.11
 | Topic               | Communications, Ham Radio
 | Development Status  | 4 - Beta
 | Distributions       | Windows, Linux
@@ -55,10 +55,6 @@ pip install --upgrade jt64env
       -v, --version  display module version
 ```
 
-| ![Set Environment](docs/images/jt64env.PNG?raw=true) |
-|:--:|
-| *JTSDK64 Environment Variables* |
-
 ## Uninstall
 
 This action applies only to those that installed `jt64env` using `pip`.
@@ -73,7 +69,7 @@ pip uninstall jt64env
 
 ## Change Log
 
-**Version 0.0.9**:
+### Version 0.0.10
 
 - Initial release to production to [PyPi Production][]
 

@@ -54,10 +54,6 @@ pip install --upgrade jt64version
       None
 ```
 
-| ![Application Versions](docs/images/jt64version.PNG?raw=true) |
-|:--:|
-| *JTSDK64 Application Versions* |
-
 This action applies only to those that installed `jt64version` using `pip`.
 
 ```bash
