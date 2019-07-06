@@ -23,9 +23,9 @@ TITLE JTSDK64 Tools Setup %version%
 ::------------------------------------------------------------------------------
 
 :: Paths
-SET JTSDK64_HOME=%CD%
-SET TOOLS_DIR=%JTSDK64_HOME%\tools
-SET SETUP_DIR=%JTSDK64_HOME%\tools\setup
+SET JTSDK_HOME=%CD%
+SET TOOLS_DIR=%JTSDK_HOME%\tools
+SET SETUP_DIR=%JTSDK_HOME%\tools\setup
 SET CURL_DIR=%SETUP_DIR%\curl\bin
 
 :: Global Environment Variables Variables
@@ -37,7 +37,7 @@ SET QT_INSTALL_DIR=%TOOLS_DIR%\Qt
 SET PGSQL_INSTALL_DIR=%TOOLS_DIR%\PostgreSQL\11
 SET PGSQL_DATA_DIR=%TOOLS_DIR%\PostgreSQL\11\data
 SET JAVA_INSTALL_DIR=%TOOLS_DIR%\java
-SET PATH=%JTSDK64_HOME%;%TOOLS_DIR%;%SETUP_DIR%;%CURL_DIR%;%PATH%
+SET PATH=%JTSDK_HOME%;%TOOLS_DIR%;%SETUP_DIR%;%CURL_DIR%;%PATH%
 
 ::------------------------------------------------------------------------------
 :: TOOL INSTALL VALIDATION

@@ -153,7 +153,7 @@ SET PROMPT=$CQT-%QTV%$F $P ^>
 IF /I [%debug%]==[1] (
     SET title-string=JTSDK64-Tools using QT %QTV% - Debug
 ) ELSE (
-    SET title-string=JTSDK64-Tools using QT %QTV% - Debug
+    SET title-string=JTSDK64-Tools using QT %QTV%
 )
 SET QTD=%JTSDK_HOME%\tools\Qt\%QTV%\mingw73_64\bin
 SET QTP=%JTSDK_HOME%\tools\Qt\%QTV%\mingw73_64\plugins\platforms
@@ -181,7 +181,7 @@ GOTO SET_FINAL
 :PY_TOOLS
 ECHO ^* Setting Python Tool Paths
 SET PYTOOLS=Installed
-call %JTSDK_HOME%\tools\python\Scripts\activate.bat %TOOLS_DIR%\python
+call %JTSDK_HOME%\tools\python\Scripts\activate.bat %JTSDK_HOME%\tools\python
 call conda activate jtpy
 
 :: Add the python scripts directory to PATH
