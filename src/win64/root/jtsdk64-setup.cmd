@@ -10,24 +10,12 @@
 :: Copyright ....: Copyright (C) 2013-2019 Greg Beam, KI7MT
 :: License ......: GPL-3
 ::
-:: jtsdk64-tools-setup is free software: you can redistribute it and/or modify it
-:: under the terms of the GNU General Public License as published by the Free
-:: Software Foundation either version 3 of the License, or (at your option) any
-:: later version.
-::
-:: jtsdk64-tools-setup is distributed in the hope that it will be useful, but WITHOUT
-:: ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
-:: FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more
-:: details.
-::
-:: You should have received a copy of the GNU General Public License
-:: along with this program.  If not, see <http://www.gnu.org/licenses/>.
 ::-----------------------------------------------------------------------------::
 @ECHO OFF
 SET /P JTSDK64_VERSION=<%CD%\ver.jtsdk
 @chcp 1252 >NUL 2>&1
 @SET LANG=en_US
-SET version=<%CD%\ver.jtsdk
+SET version=%JTSDK64_VERSION%
 TITLE JTSDK64 Tools Setup %version%
 
 ::------------------------------------------------------------------------------
@@ -98,7 +86,7 @@ ECHO Checking Python
 IF EXIST "%TOOLS_DIR%\python\python.exe" ( SET PYTHON_STATUS=Installed )
 
 IF EXIST "%TOOLS_DIR%\python\Scripts\activate.bat" (
-    call %TOOLS_DIR%\python\Scripts\activate.bat D:\JTSDK64-Tools\tools\python
+    call %TOOLS_DIR%\python\Scripts\activate.bat %TOOLS_DIR%\python
 )
 
 IF EXIST "%TOOLS_DIR%\python\envs\jtpy\python.exe" (

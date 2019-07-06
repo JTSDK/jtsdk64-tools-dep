@@ -8,6 +8,7 @@
 :: Author .......: Greg, Beam, KI7MT, <ki7mt@yahoo.com>
 :: Copyright ....: Copyright (C) 2013-2019 Greg Beam, KI7MT
 :: License ......: GPLv3
+::
 ::-----------------------------------------------------------------------------::
 
 :: Process input commands

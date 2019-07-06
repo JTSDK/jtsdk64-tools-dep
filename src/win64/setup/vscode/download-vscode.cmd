@@ -9,6 +9,7 @@
 :: Author .......: Greg, Beam, KI7MT, <ki7mt@yahoo.com>
 :: Copyright ....: Copyright (C) 2013-2019 Greg Beam, KI7MT
 :: License ......: GPL-3
+::
 ::-----------------------------------------------------------------------------::
 
 :: Process variables

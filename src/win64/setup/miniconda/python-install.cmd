@@ -8,6 +8,7 @@
 :: Author .......: Greg, Beam, KI7MT, <ki7mt@yahoo.com>
 :: Copyright ....: Copyright (C) 2013-2019 Greg Beam, KI7MT
 :: License ......: GPLv3
+::
 ::-----------------------------------------------------------------------------::
 
 :: Process input commands
@@ -50,7 +51,7 @@ ECHO ------------------------------
 ECHO.
 ECHO Activating Miniconda
 IF EXIST "%TOOLS_DIR%\python\Scripts\activate.bat" (
-    call %TOOLS_DIR%\python\Scripts\activate.bat D:\JTSDK64-Tools\tools\python
+    call %TOOLS_DIR%\python\Scripts\activate.bat %TOOLS_DIR%\python
     ECHO Done
     GOTO EOF
 ) ELSE (
