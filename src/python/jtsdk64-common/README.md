@@ -3,9 +3,9 @@
 | Application Data ||
 | ---| --- |
 | Package             | `jt64common`
-| Version             | 0.0.1
+| Version             | 0.0.9
 | Topic               | Communications, Ham Radio
-| Development Status  | 2 - Beta
+| Development Status  | 4 - Beta
 | Distributions       | Windows, Linux
 | Arch                | x86-64
 | Python              | Version >= 3.5
@@ -23,24 +23,23 @@ Common utilities / functions for use with JTSDK64 Tools Python Scripts.
 
 ## Requirements
 
-- If running [JTSDK64-Tools][], install [Install Miniconda Python][] if you'venot done so.
+- If running [JTSDK64-Tools][], install [Install Miniconda Python][] if you've not done so.
 - Any [Python][] version >= 3.5, virtual or native installation
 - No special modules or distributions are required.
 
 ## Installation
 
-During `Beta` testing, installation will pull yhe application from
-[test.pypi.org][]. After `Beta` testing, the package will be moved to the main
-[PyPi][] repository where it will remain.
+This package now resides in the main [PyPi][] repository and can be installed
+using `pip`.
 
-Open a condole, and type the following:
+Open a console, and type the following:
 
 ```bash
-# If using JTSDK-Tools, active jtpy first
+# If using JTSDK64-Tools, active jtpy first
 conda activate jtpy
 
-# Install command: note the space after trailing /
-pip install -i https://test.pypi.org/simple/ jt64common
+# Install command:
+pip install install --upgrade jt64common
 
 ```
 
@@ -53,6 +52,7 @@ pip install -i https://test.pypi.org/simple/ jt64common
     usage: None by users
 
 ```
+
 ## Uninstall
 
 Open a condole, and type the following:
