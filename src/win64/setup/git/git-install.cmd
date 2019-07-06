@@ -29,8 +29,7 @@ ECHO Running Git-2.22.0-64-bit^.exe^, Please Wait
 Git-2.22.0-64-bit.exe ^/SILENT ^/CLOSEAPPLICATIONS ^/LOADINF=.^\git.inf
 
 ECHO Verifying Installation
-git --version >NUL 2>&1
-IF %ERRORLEVEL% == 0 (
+IF EXIST %PROGRAMFILES%\Git\bin\git.exe (
     SET GIT_STATUS=Installed
     ECHO Install Check Passed
     GOTO INSTALL_SUMMARY
@@ -121,5 +120,5 @@ ECHO.
 GOTO EOF
 
 :EOF
-CD %JTSDK64_HOME%
+CD %JTSDK_HOME%
 exit /b 0
