@@ -3,9 +3,9 @@
 | Application Data ||
 | ---| --- |
 | Package             | `jt64version`
-| Version             | 0.0.3
+| Version             | 0.0.10
 | Topic               | Communications, Ham Radio
-| Development Status  | 2 - Beta
+| Development Status  | 4 - Beta
 | Distributions       | Windows, Linux
 | Arch                | x86-64
 | Python              | Version >= 3.5
@@ -14,38 +14,33 @@
 
 ## Development Status
 
-This package is in `Beta`. The package was tested using
-[Miniconda Python][] with a default virtual environment creation e.g.
-(`conda create -n jtpy python=3`).
+This package is in `Beta`, and was tested using [Miniconda Python][]
+in a default virtual environment e.g. (`conda create -n jtpy python=3`).
 
 ## Description
 
 Simple [Python][] script to print application versions associated with
-[JTSDK64-Tools][]
+[JTSDK64-Tools][]. Currently, it only supports Windows. Linux flavors will be
+added in future releases.
 
 ## Requirements
 
-If using the self-contained executable, there is no requirement to
-[Install Miniconda Python][], otherwise, see the following:
-
-- If running [JTSDK64-Tools][], install [Install Miniconda Python][].
 - Any [Python][] version >= 3.5, virtual or native installation
 - No special modules or distributions are required.
 
 ## Installation
 
-During `Beta` testing, the application will be delivered in a self-contained
-Windows executable; no action is required. To install manually, use the
-following steps:
+This package resides in the main [PyPi Production][] repository and can be
+installed using `pip`.
 
-Open a condole, and type the following:
+Open a console, and type the following:
 
 ```bash
-# If using JTSDK64-Tools, active jtpy first
+# For JTSDK64-Tools users, activate jtpy first
 conda activate jtpy
 
-# Install command: note the space after trailing /
-pip install -i https://test.pypi.org/simple/ jt64version
+# Install command:
+pip install --upgrade jt64version
 ```
 
 ## Usage
@@ -55,7 +50,7 @@ pip install -i https://test.pypi.org/simple/ jt64version
 
     Print Application Versions associated with `JTSDK64-Tools`
 
-    optional arguments:
+    Optional arguments:
       None
 ```
 
@@ -63,21 +58,25 @@ pip install -i https://test.pypi.org/simple/ jt64version
 |:--:|
 | *JTSDK64 Application Versions* |
 
-
-This action apply's only to those that installed `jt64version` using `pip`.
+This action applies only to those that installed `jt64version` using `pip`.
 
 ```bash
-# JTSDK64-Tools Env and type the following.
-# Ensure jtpy is the active Python environment
+# For JTSDK64-Tools users, activate jtpy first
 conda activate jtpy
 
 # Uninstall command
 pip uninstall jt64version
 ```
 
-[Install Miniconda Python]: https://github.com/KI7MT/jtsdk-dotnet-core/wiki/Install-Python
-[JTSDK64-Tools]: https://github.com/KI7MT/jtsdk64-tools-scripts
-[test.pypi.org]: https://test.pypi.org/project/jt64version/
-[PyPi]: https://pypi.org/
-[Miniconda Python]: https://docs.conda.io/en/latest/miniconda.html
-[Python]: https://www.python.org/
+## Change Log
+
+### Version 0.0.10
+
+- Initial production release to [PyPi Production][].
+
+[Install Miniconda Python]: `https://ki7mt.github.io/jtsdk64-tools/`
+[JTSDK64-Tools]: `https://github.com/KI7MT/jtsdk64-tools`
+[test.pypi.org]: `https://test.pypi.org/project/jt64version/`
+[PyPi Production]: `https://pypi.org/project/jt64version/`
+[Miniconda Python]: `https://docs.conda.io/en/latest/miniconda.html`
+[Python]: `https://www.python.org/`

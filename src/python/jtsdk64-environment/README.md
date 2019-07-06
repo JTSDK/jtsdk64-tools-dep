@@ -3,7 +3,7 @@
 | Application Data ||
 | ---| --- |
 | Package             | `jt64env`
-| Version             | 0.0.9
+| Version             | 0.0.10
 | Topic               | Communications, Ham Radio
 | Development Status  | 4 - Beta
 | Distributions       | Windows, Linux
@@ -14,9 +14,8 @@
 
 ## Development Status
 
-This package is in `Beta`. The package was tested using
-[Miniconda Python][] with a default virtual environment creation e.g.
-(`conda create -n jtpy python=3`).
+This package is in `Beta`, and was tested using [Miniconda Python][]
+in a default virtual environment e.g. (`conda create -n jtpy python=3`).
 
 ## Description
 
@@ -26,22 +25,18 @@ be added in future releases.
 
 ## Requirements
 
-If using the self-contained executable, there is no requirement to
-[Install Miniconda Python][], otherwise, see the following:
-
-- If running [JTSDK64-Tools][], install [Install Miniconda Python][].
 - Any [Python][] version >= 3.5, virtual or native installation
 - No special modules or distributions are required.
 
 ## Installation
 
-This script resides int the main [PyPi][] repository. Installation is via pip
-using the following command:
+This package resides in the main [PyPi Production][] repository and can be
+installed using `pip`.
 
 Open a condole, and type the following:
 
 ```bash
-# If using JTSDK-Tools, activate jtpy first
+# JTSDK64-Tools users, activate jtpy first
 conda activate jtpy
 
 # Install command:
@@ -66,11 +61,10 @@ pip install --upgrade jt64env
 
 ## Uninstall
 
-This action apply's only to those that installed `jt64env` using `pip`.
+This action applies only to those that installed `jt64env` using `pip`.
 
 ```bash
-# JTSDK64-Tools Env and type the following.
-# Ensure jtpy is the active Python environment
+# For JTSDK64-Tools, activate jtpy first
 conda activate jtpy
 
 # Uninstall command
@@ -81,12 +75,11 @@ pip uninstall jt64env
 
 **Version 0.0.9**:
 
-- Initial release to production [PyPi][]
+- Initial release to production to [PyPi Production][]
 
-
-[Install Miniconda Python]: https://github.com/KI7MT/jtsdk-dotnet-core/wiki/Install-Python
-[JTSDK64-Tools]: https://github.com/KI7MT/jtsdk64-tools-scripts
-[test.pypi.org]: https://test.pypi.org/project/jt64env/
-[PyPi]: https://pypi.org/project/jt64common/
-[Miniconda Python]: https://docs.conda.io/en/latest/miniconda.html
-[Python]: https://www.python.org/
+[Install Miniconda Python]: `https://ki7mt.github.io/jtsdk64-tools/`
+[JTSDK64-Tools]: `https://github.com/KI7MT/jtsdk64-tools`
+[test.pypi.org]: `https://test.pypi.org/project/jt64env/`
+[PyPi Production]: `https://pypi.org/project/jt64env/`
+[Miniconda Python]: `https://docs.conda.io/en/latest/miniconda.html`
+[Python]: `https://www.python.org/`

@@ -29,7 +29,7 @@
 :: Make File Variables
 SET app_name=jt64env
 SET pypitest=--repository-url https://test.pypi.org/legacy/ dist/*
-SET pypiprod=dist/*
+SET pypiprod=-dist/*
 SET test_install=-i https://test.pypi.org/simple/ %app_name%
 SET prod_install=install --upgrade %app_name%
 SET pubprod=dist/*

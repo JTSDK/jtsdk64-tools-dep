@@ -22,9 +22,10 @@ PWD	:= $(shell pwd)
 REQ	:= $(PWD)/requirements.txt
 REQDEV	:= $(PWD)/requirements-dev.txt
 
-# publication  install commands
+# publication
+install commands
 TPUB	:= -i https://test.pypi.org/simple/ jt64version
-PPUB	:= -i https://pypi.org/simple/ jt64version
+PPUB	:= install --upgrade jt64version
 
 ## publication end points
 PUBTEST	:= upload --repository-url https://test.pypi.org/legacy/ dist/*
