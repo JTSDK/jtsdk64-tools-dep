@@ -249,5 +249,4 @@ Uninstall-Miniconda3^.exe
 GOTO EOF
 
 :EOF
-CD %JTSDK64_HOME%
 exit /b 0

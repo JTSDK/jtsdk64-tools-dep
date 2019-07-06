@@ -16,13 +16,13 @@ IF /I [%debug%]==[1] (
     CLS
 )
 ECHO --------------------------------------------
-ECHO  JTSDK64 Tools Setup v%version%
+ECHO  JTSDK64 Tools Setup %version%
 ECHO --------------------------------------------
 ECHO.
 ECHO  Core Tool Status
 ECHO     Git .......... %GIT_STATUS%
-ECHO     Python ....... %PYTHON_STATUS%
 ECHO     VS Code ...... %VSCODE_STATUS%
+ECHO     Python ....... %PYTHON_STATUS%
 ECHO     JTPY Env ..... %JTPY_STATUS%
 ECHO.
 ECHO  Qt Tool Chain Status
@@ -43,7 +43,7 @@ ECHO     Maintenance .. %QTMAINT_STATUS%
 ECHO.
 ECHO  Help Commands
 ECHO     Git .......... gitsetup help
-ECHO     Python ....... pysetup help
 ECHO     VS Code ...... codesetup help
+ECHO     Python ....... pysetup help
 ECHO     Qt ........... qtetup help
 ECHO.

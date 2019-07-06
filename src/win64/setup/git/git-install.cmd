@@ -120,5 +120,4 @@ ECHO.
 GOTO EOF
 
 :EOF
-CD %JTSDK_HOME%
 exit /b 0
