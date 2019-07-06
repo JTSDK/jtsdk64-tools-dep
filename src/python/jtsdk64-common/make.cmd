@@ -29,6 +29,7 @@
 :: Make File Variables
 SET app_name=jt64common
 SET pypitest=--repository-url https://test.pypi.org/legacy/ dist/*
+SET pypiprod=dist/*
 SET test_install=-i https://test.pypi.org/simple/ %app_name%
 SET prod_install=install --upgrade %app_name%
 SET requirements=%CD%\requirements.txt
@@ -153,7 +154,7 @@ ECHO  Publishing to PyPi test Site
 ECHO ----------------------------------------
 ECHO.
 ECHO Plublishing Package: %app_name%
-twine upload dist/*
+twine upload %pypitest%
 
 :: If the esit status was not 0, for to test publish error
 IF %ERRORLEVEL% NEQ 0 (
@@ -177,7 +178,7 @@ ECHO  Publishing to PyPi Production Site
 ECHO ----------------------------------------
 ECHO.
 ECHO Plublishing Package: %app_name%
-twine upload dist/*
+twine upload %pypiprod%
 
 :: If the exit status was not 0, goto publish error
 IF %ERRORLEVEL% NEQ 0 (

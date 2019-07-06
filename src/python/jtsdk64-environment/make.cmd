@@ -29,9 +29,10 @@
 :: Make File Variables
 SET app_name=jt64env
 SET pypitest=--repository-url https://test.pypi.org/legacy/ dist/*
+SET pypiprod=dist/*
 SET test_install=-i https://test.pypi.org/simple/ %app_name%
-SET prod_install=-i https://pypi.org/simple/ %app_name%
-SET pubprod=twine upload dist/*
+SET prod_install=install --upgrade %app_name%
+SET pubprod=dist/*
 SET requirements=%CD%\requirements.txt
 SET requirements-%CD%\dev=requirements-dev.txt
 
@@ -209,7 +210,7 @@ ECHO.
 ECHO To install ^[ %app_name% ^] from ^( pypi.org ^)^, run the
 ECHO following command ^:
 ECHO.
-ECHO pip install %prod_install%
+ECHO pip install --upgrade %app_name%
 ECHO.
 ECHO.
 ECHO Finished

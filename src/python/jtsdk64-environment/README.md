@@ -3,9 +3,9 @@
 | Application Data ||
 | ---| --- |
 | Package             | `jt64env`
-| Version             | 0.0.3
+| Version             | 0.0.9
 | Topic               | Communications, Ham Radio
-| Development Status  | 2 - Beta
+| Development Status  | 4 - Beta
 | Distributions       | Windows, Linux
 | Arch                | x86-64
 | Python              | Version >= 3.5
@@ -20,8 +20,9 @@ This package is in `Beta`. The package was tested using
 
 ## Description
 
-Simple [Python][] self-contained executable which prints various environment
-variables associated with [JTSDK64-Tools][]
+Simple [Python][] script that prints various environment variables associated
+with [JTSDK64-Tools][]. Currently, it only supports Windows. Linux flavors will
+be added in future releases.
 
 ## Requirements
 
@@ -34,18 +35,17 @@ If using the self-contained executable, there is no requirement to
 
 ## Installation
 
-During `Beta` testing, the application will be delivered in a self-contained
-Windows executable; no action is required. To install manually, use the
-following steps:
+This script resides int the main [PyPi][] repository. Installation is via pip
+using the following command:
 
 Open a condole, and type the following:
 
 ```bash
-# If using JTSDK-Tools, active jtpy first
+# If using JTSDK-Tools, activate jtpy first
 conda activate jtpy
 
-# Install command: note the space after trailing /
-pip install -i https://test.pypi.org/simple/ jt64env
+# Install command:
+pip install --upgrade jt64env
 ```
 
 ## Usage
@@ -77,9 +77,16 @@ conda activate jtpy
 pip uninstall jt64env
 ```
 
+## Change Log
+
+**Version 0.0.9**:
+
+- Initial release to production [PyPi][]
+
+
 [Install Miniconda Python]: https://github.com/KI7MT/jtsdk-dotnet-core/wiki/Install-Python
 [JTSDK64-Tools]: https://github.com/KI7MT/jtsdk64-tools-scripts
 [test.pypi.org]: https://test.pypi.org/project/jt64env/
-[PyPi]: https://pypi.org/
+[PyPi]: https://pypi.org/project/jt64common/
 [Miniconda Python]: https://docs.conda.io/en/latest/miniconda.html
 [Python]: https://www.python.org/

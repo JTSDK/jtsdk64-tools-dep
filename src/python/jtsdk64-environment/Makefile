@@ -24,11 +24,11 @@ REQDEV	:= $(PWD)/requirements-dev.txt
 
 # publication  install commands
 TPUB	:= -i https://test.pypi.org/simple/ jt64env
-PPUB	:= -i https://pypi.org/simple/ jtenv
+PPUB	:= install --upgrade jt64env
 
 ## publication end points
 PUBTEST	:= upload --repository-url https://test.pypi.org/legacy/ dist/*
-PUBPROD	:= upload dist/*
+PUBPROD	:= dist/*
 
 # targets
 all: install
