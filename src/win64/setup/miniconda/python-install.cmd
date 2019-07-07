@@ -124,23 +124,23 @@ ECHO ------------------------------
 ECHO.
 ECHO Python Dependencies
 ECHO ---------------------------------------
-python -m pip install --upgrade colorconsole
+python -m pip install colorconsole -U
 ECHO.
 ECHO JT64 Common
 ECHO ---------------------------------------
-python -m pip install --upgrade jt64common
+python -m pip install jt64common -U
 ECHO.
 ECHO JT64 Env
 ECHO ---------------------------------------
-python -m pip install --upgrade jt64env
+python -m pip install jt64env -U
 ECHO.
 ECHO JT64 Version
 ECHO ---------------------------------------
-python -m pip install --upgrade jt64version
+python -m pip install jt64version -U
 ECHO.
 ECHO JT64 Gentc
 ECHO ---------------------------------------
-python -m pip install --upgrade jt64gentc
+python -m pip install jt64gentc -U
 GOTO INSTALL_SUMMARY
 
 :: INSTALL SUMMARY -------------------------------------------------------------
