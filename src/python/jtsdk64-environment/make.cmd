@@ -210,7 +210,7 @@ ECHO.
 ECHO To install ^[ %app_name% ^] from ^( pypi.org ^)^, run the
 ECHO following command ^:
 ECHO.
-ECHO pip %app_name%
+ECHO pip %prod_install%
 ECHO.
 ECHO.
 ECHO Finished
