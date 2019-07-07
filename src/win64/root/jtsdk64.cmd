@@ -19,7 +19,7 @@ IF /I [%1]==[-d] (
 )
 
 :APP_INFO
-SET JTSDK_VERSION=3.1.0
+SET JTSDK64_VERSION=3.1.0
 @chcp 65001 >NUL 2>&1
 @SET LANG=en_US
 
@@ -29,7 +29,7 @@ SET PYTOOLS=Not Installed
 SET UNIXTOOLS=Disabled
 
 :: JTSDK Version
-SET version=%JTSDK_VERSION%
+SET version=%JTSDK64_VERSION%
 
 :: Set Initial Header informaiton
 TITLE JTSDK64 Tools %version%

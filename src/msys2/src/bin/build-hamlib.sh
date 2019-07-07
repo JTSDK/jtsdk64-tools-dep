@@ -16,7 +16,7 @@
 set -e
 
 # Script Info
-VER="$JTSDK_VERSION"
+VER="$JTSDK64_VERSION"
 SCRIPT_NAME="JTSDK64 Tools MSYS2 Hamlib Build Script"
 
 # Foreground colors

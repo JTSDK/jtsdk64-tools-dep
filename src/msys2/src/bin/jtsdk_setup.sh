@@ -109,7 +109,7 @@ function jt64update () {
 
     # If the source folder exists, pull and make install
     echo 'Checking repository'
-    if [ -f ~/src/jtsdk64-tools-msys2/Makefile ]
+    if [ -f ~/src/jtsdk64-tools/msys2/Makefile ]
     then
         cd ~/src/jtsdk64-tools-msys2
         git pull
@@ -121,8 +121,8 @@ function jt64update () {
         rm -rf ~/src/jtsdk64-tools-msys2 > /dev/null 2>&1
         mkdir -p ~/src >/dev/null 2>&1
         cd ~/src >/dev/null 2>&1
-        git clone https://github.com/KI7MT/jtsdk64-tools-msys2.git
-        cd ~/src/jtsdk64-tools-msys2
+        git clone https://github.com/KI7MT/jtsdk64-tools.git
+        cd ~/src/jtsdk64-tools/src/msys2
         make install
         source ~/bin/jtsdk_setup.sh
         cd ~
