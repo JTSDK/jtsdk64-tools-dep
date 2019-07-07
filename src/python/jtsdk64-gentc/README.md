@@ -3,7 +3,7 @@
 | Application Data ||
 | ---| --- |
 | Package             | `jt64gentc`
-| Version             | 0.0.15
+| Version             | 0.0.16
 | Topic               | Communications, Ham Radio
 | Development Status  | 4 - Beta
 | Distributions       | Windows, Linux
@@ -40,7 +40,19 @@ Open a console, and type the following:
 conda activate jtpy
 
 # Install command
-pip install install --upgrade jt64gentc
+pip install jt64gentc
+```
+
+## Upgrade Package
+
+Open a console, and type the following:
+
+```bash
+# For JTSDK64-Tools users, active jtpy first
+conda activate jtpy
+
+# Upgrade the package
+pip install jt64gentc -U
 ```
 
 ## Usage

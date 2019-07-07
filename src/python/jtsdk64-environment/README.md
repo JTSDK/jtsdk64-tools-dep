@@ -3,7 +3,7 @@
 | Application Data ||
 | ---| --- |
 | Package             | `jt64env`
-| Version             | 0.0.12
+| Version             | 0.0.16
 | Topic               | Communications, Ham Radio
 | Development Status  | 4 - Beta
 | Distributions       | Windows, Linux
@@ -40,8 +40,21 @@ Open a condole, and type the following:
 conda activate jtpy
 
 # Install command:
-pip install --upgrade jt64env
+pip install jt64env
 ```
+
+## Upgrade Package
+
+Open a console, and type the following:
+
+```bash
+# For JTSDK64-Tools users, active jtpy first
+conda activate jtpy
+
+# Upgrade the package
+pip install jt64env -U
+```
+
 
 ## Usage
 
