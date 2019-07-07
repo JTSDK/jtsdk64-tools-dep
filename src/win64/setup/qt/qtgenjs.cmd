@@ -29,8 +29,8 @@ set app_name=qt
 set app_formal_name=Qt
 
 :: source and output file paths
-set source_dir=%JTSDK64_HOME%\tools\setup\qt
-set tools_root=%JTSDK64_HOME%\tools
+set source_dir=%JTSDK_HOME%\tools\setup\qt
+set tools_root=%JTSDK_HOME%\tools
 set out_file_path=%source_dir%
 
 :: Qs scripts
