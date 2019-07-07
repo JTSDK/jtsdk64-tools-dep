@@ -31,7 +31,7 @@ SET app_name=jt64common
 SET pypitest=--repository-url https://test.pypi.org/legacy/ dist/*
 SET pypiprod=dist/*
 SET test_install=-i https://test.pypi.org/simple/ %app_name%
-SET prod_install=install --upgrade %app_name%
+SET prod_install=install %app_name%
 SET requirements=%CD%\requirements.txt
 SET requirements-%CD%\dev=requirements-dev.txt
 
@@ -188,7 +188,7 @@ ECHO.
 ECHO To install ^[ %app_name% ^] from ^( pypi.org ^)^, run the
 ECHO following command ^:
 ECHO.
-ECHO pip install %prod_install%
+ECHO pip %prod_install%
 ECHO.
 ECHO.
 ECHO Finished

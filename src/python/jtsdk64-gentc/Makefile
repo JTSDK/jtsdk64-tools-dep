@@ -24,7 +24,7 @@ REQDEV	:= $(PWD)/requirements-dev.txt
 
 # publication  install commands
 TPUB	:= -i https://test.pypi.org/simple/ jt64gentc
-PPUB	:= install --upgrade jt64gentc
+PPUB	:= install jt64gentc
 
 ## publication end points
 PUBTEST	:= upload --repository-url https://test.pypi.org/legacy/ dist/*
