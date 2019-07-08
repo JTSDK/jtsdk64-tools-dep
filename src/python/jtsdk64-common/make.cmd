@@ -50,7 +50,7 @@ GOTO _HELP
 
 :: Clean the source tree
 :_CLEAN
-CLS
+ECHO.
 ECHO ----------------------------------------
 ECHO  Clean Solution %app_name%
 ECHO ----------------------------------------
@@ -60,7 +60,7 @@ GOTO EOF
 
 :: Clean the source tree
 :_DISTCLEAN
-CLS
+ECHO.
 ECHO ----------------------------------------
 ECHO  Clean Distribution %app_name%
 ECHO ----------------------------------------
@@ -77,7 +77,7 @@ GOTO EOF
 
 :: Install application
 :_INSTALL
-CLS
+ECHO.
 ECHO ----------------------------------------
 ECHO  Installing %app_name% locally with pip
 ECHO ----------------------------------------
@@ -90,7 +90,7 @@ GOTO EOF
 
 :: Uninstall application
 :_UNINSTALL
-CLS
+ECHO.
 ECHO --------------------------------------------
 ECHO  Installing %app_name% with pip
 ECHO --------------------------------------------
@@ -101,7 +101,7 @@ GOTO EOF
 
 :: Run pip install -r requirments.txt
 :_SETUP
-CLS
+ECHO.
 ECHO ----------------------------------------
 ECHO  Setup Requirements
 ECHO ----------------------------------------
@@ -118,7 +118,7 @@ GOTO EOF
 
 :: Run pip install -r requirments-dev.txt
 :_SETUPDEV
-CLS
+ECHO.
 ECHO ----------------------------------------
 ECHO  Setup Developer Requirements
 ECHO ----------------------------------------
@@ -135,7 +135,7 @@ GOTO EOF
 
 :: Run Python setuptools to package app
 :_DIST
-CLS
+ECHO.
 ECHO ----------------------------------------
 ECHO  Distribution Package ^: %app_name%
 ECHO ----------------------------------------
@@ -148,7 +148,7 @@ GOTO EOF
 
 :: Run Python twine to publish to test.pypi.org
 :_PUBTEST
-CLS
+ECHO.
 ECHO ----------------------------------------
 ECHO  Publishing to PyPi test Site
 ECHO ----------------------------------------
@@ -172,7 +172,7 @@ GOTO EOF
 
 :: Run Python twine to publish to test.pypi.org
 :_PUBLISH
-CLS
+ECHO.
 ECHO ----------------------------------------
 ECHO  Publishing to PyPi Production Site
 ECHO ----------------------------------------

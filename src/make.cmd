@@ -34,7 +34,7 @@ git rev-parse --short HEAD
 
 :: Get Command line Options %1
 IF /I [%1]==[clean] ( GOTO _CLEAN )
-IF /I [%1]==[build] ( GOTO _BUILD )
+IF /I [%1]==[dist] ( GOTO _DIST )
 IF /I [%1]==[publish] ( GOTO _PUBLISH )
 IF /I [%1]==[install] ( GOTO _INSTALL )
 IF /I [%1]==[help] ( GOTO _HELP )
@@ -42,32 +42,39 @@ GOTO HELP
 
 :_CLEAN
 CLS
-ECHO ------------------------------
-ECHO  Clean Python Apps
-ECHO ------------------------------
-ECHO.
-PUSHD %CD%\python
+PUSHD %CD%\python\jtsdk64-common
+call .\make.cmd distclean
+POPD
 
-ECHO Cleaning All Release Files
-call .\jt64common\make.cmd clean
-call .\jt64gentc\make.cmd clean
-call .\jt64environment\make.cmd clean
-call .\jt64version\make.cmd clean
+PUSHD %CD%\python\jtsdk64-gentc
+call .\make.cmd distclean
+POPD
+
+PUSHD %CD%\python\jtsdk64-environment
+call .\make.cmd distclean
+POPD
+
+PUSHD %CD%\python\jtsdk64-version
+call .\make.cmd distclean
 POPD
 GOTO EOF
 
-:_BUILD
+:_DIST
 CLS
-ECHO ------------------------------
-ECHO  Building Python Apps
-ECHO ------------------------------
-ECHO.
+PUSHD %CD%\python\jtsdk64-common
+call .\make.cmd dist
+POPD
 
-PUSHD %CD%\python
-call .\jt64common\make.cmd dist
-call .\jt64gentc\make.cmd dist
-call .\jt64environment\make.cmd dist
-call .\jt64version\make.cmd dist
+PUSHD %CD%\python\jtsdk64-gentc
+call .\make.cmd dist
+POPD
+
+PUSHD %CD%\python\jtsdk64-environment
+call .\make.cmd dist
+POPD
+
+PUSHD %CD%\python\jtsdk64-version
+call .\make.cmd dist
 POPD
 GOTO EOF
 
@@ -77,11 +84,21 @@ ECHO ------------------------------
 ECHO  Publishing Python Apps
 ECHO ------------------------------
 ECHO.
-PUSHD %CD%\python
-call .\jt64common\make.cmd publish
-call .\jt64gentc\make.cmd publish
-call .\jt64environment\make.cmd publish
-call .\jt64version\make.cmd publish
+CLS
+PUSHD %CD%\python\jtsdk64-common
+call .\make.cmd publish
+POPD
+
+PUSHD %CD%\python\jtsdk64-gentc
+call .\make.cmd publish
+POPD
+
+PUSHD %CD%\python\jtsdk64-environment
+call .\make.cmd publish
+POPD
+
+PUSHD %CD%\python\jtsdk64-version
+call .\make.cmd publish
 POPD
 GOTO EOF
 
@@ -139,13 +156,14 @@ ECHO.
 ECHO  The build script takes only one option^:
 ECHO.
 ECHO    clean       :  clean the build tree
-ECHO    build       :  build source tree
+ECHO    dist        :  compile distributions files
 ECHO    publish     :  publish the application
 ECHO    install     :  install all applications
 ECHO.
-ECHO    Example:
-ECHO    make publish
-ECHO    make install
+ECHO    Example Sequence:
+ECHO.     make clean
+ECHO      make dist
+ECHO      make install
 ECHO.
 GOTO EOF
 
