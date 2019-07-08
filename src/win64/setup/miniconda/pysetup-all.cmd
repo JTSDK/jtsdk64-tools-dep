@@ -2,7 +2,7 @@
 :: Name .........: pysetup-all-stub.cmd
 :: Project ......: Part of the JTSDK64 Tools Project
 :: Description ..: Installs all Python requirements for JTSDK64
-:: Project URL ..: https://github.com/KI7MT/jtsdk64-tools-scripts.git
+:: Project URL ..: https://github.com/KI7MT/jtsdk64-tools.git
 :: Usage ........: Call this from jtsdk64-tools-setup => pysetup-all
 ::
 :: Author .......: Greg, Beam, KI7MT, <ki7mt@yahoo.com>

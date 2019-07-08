@@ -25,7 +25,7 @@ GOTO INSTALL_HELP
 
 :: INSTALL MINICONDA -----------------------------------------------------------
 :INSTALL_MINICONDA
-CLS
+ECHO.
 ECHO ------------------------------
 ECHO Installing Miniconda Python
 ECHO ------------------------------
@@ -50,8 +50,8 @@ ECHO Activating Miniconda Python
 ECHO ------------------------------
 ECHO.
 ECHO Activating Miniconda
-IF EXIST "%TOOLS_DIR%\python\Scripts\activate.bat" (
-    call %TOOLS_DIR%\python\Scripts\activate.bat %TOOLS_DIR%\python
+IF EXIST "%LOCALAPPDATA%\Miniconda3\Scripts\activate.bat" (
+    call %LOCALAPPDATA%\Miniconda3\Scripts\activate.bat %LOCALAPPDATA%\Miniconda3
     ECHO Done
     GOTO EOF
 ) ELSE (
@@ -170,7 +170,7 @@ GOTO EOF
 SET curl_status=Not Available
 SET name=Miniconda3-latest-Windows-x86_64.exe
 SET url=https://repo.anaconda.com/miniconda/Miniconda3-latest-Windows-x86_64.exe
-CLS
+ECHO.
 ECHO -----------------------------------------------------
 ECHO  Update Miniconda Installer
 ECHO -----------------------------------------------------

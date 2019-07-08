@@ -19,7 +19,7 @@ GOTO _HELP
 
 :: INSTALL GIT -----------------------------------------------------------------
 :INSTALL_GIT
-CLS
+ECHO.
 ECHO ------------------------------
 ECHO Installing Git
 ECHO ------------------------------
@@ -40,7 +40,7 @@ IF EXIST %PROGRAMFILES%\Git\bin\git.exe (
 
 :: UPDATE GIT ------------------------------------------------------------------
 :UPDATE_GIT
-CLS
+ECHO.
 ECHO ------------------------------
 ECHO Updating Git Installation
 ECHO ------------------------------
@@ -57,7 +57,7 @@ IF ERRORLEVEL 0 (
 
 :: UNINSTALL -------------------------------------------------------------------
 :UNINSTALL
-CLS
+ECHO.
 ECHO -----------------------------------------------------
 ECHO  JTSDK64 Git Uninstall
 ECHO -----------------------------------------------------

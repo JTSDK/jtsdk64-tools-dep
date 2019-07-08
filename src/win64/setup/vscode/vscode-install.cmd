@@ -19,7 +19,7 @@ GOTO _HELP
 
 :: INSTALL VS Code -------------------------------------------------------------
 :INSTALL_CODE
-CLS
+ECHO.
 ECHO ------------------------------
 ECHO Installing VS Code
 ECHO ------------------------------
@@ -41,7 +41,7 @@ IF EXIST "%LOCALAPPDATA%\Programs\Microsoft VS Code\Code.exe" (
 
 :: UNINSTALL -------------------------------------------------------------------
 :UNINSTALL
-CLS
+ECHO.
 ECHO -----------------------------------------------------
 ECHO  JTSDK64 VS Code Uninstall
 ECHO -----------------------------------------------------

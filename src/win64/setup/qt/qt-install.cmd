@@ -109,7 +109,7 @@ GOTO EOF
 
 :: ADD_PACKAGES ----------------------------------------------------------------
 :UPDATE_COMPONENTS
-CLS
+ECHO.
 ECHO -------------------------------------------------------
 ECHO  JTSDK64 Qt Maintainence Tool Update Components
 ECHO -------------------------------------------------------
@@ -121,7 +121,7 @@ GOTO EOF
 
 :: MANAGE_PACKAGES ----------------------------------------------------------------
 :MANAGE_COMPONENTS
-CLS
+ECHO.
 ECHO -------------------------------------------------------
 ECHO  JTSDK64 Qt Maintainence Tool Manage Components
 ECHO -------------------------------------------------------

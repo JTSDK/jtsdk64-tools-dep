@@ -42,8 +42,11 @@ IF ["%selection%"]==["5.13.0"] ( GOTO _FOUND )
 GOTO _NOTFOUND
 
 :_FOUND
-DEL /F /Q %tmp_file%
-ECHO %selection% > %tmp_file%
+DEL /F /Q "%JTSDK_CONFIG%\qt5.12.2" >NUL 2>&1
+DEL /F /Q "%JTSDK_CONFIG%\qt5.12.3" >NUL 2>&1
+DEL /F /Q "%JTSDK_CONFIG%\qt5.12.4" >NUL 2>&1
+DEL /F /Q "%JTSDK_CONFIG%\qt5.13.0" >NUL 2>&1
+type nul > %JTSDK_CONFIG%\qt%selection%
 if %ERRORLEVEL% == 0 (
     ECHO.
     ECHO New Version set to : %selection%

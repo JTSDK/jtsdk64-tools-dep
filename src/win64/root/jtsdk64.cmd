@@ -62,7 +62,7 @@ GOTO POSTGRES_CHECK
 :POSTGRES_CHECK
 ECHO ^* Checking PostgreSQL
 IF EXIST "%PROGRAMFILES%\PostgreSQL\11\pg_env.bat" (
-    call %PROGRAMFILES%\PostgreSQL\11\pg_env.bat
+    call "%PROGRAMFILES%\PostgreSQL\11\pg_env.bat"
     SET POSTGRES=Installed
 )
 GOTO CORE_TOOLS
@@ -73,7 +73,7 @@ GOTO CORE_TOOLS
 
 :CORE_TOOLS
 ECHO ^* Setting Core Tool Variables
-IF EXIST "%JTSDK_HOME%\tools" (SET CORETOOLS=Installed)
+IF EXIST "%JTSDK_HOME%\tools" ( SET CORETOOLS=Installed )
 SET fftwv=3.3.5
 SET libusbv=1.0.22
 SET nsisv=3.04
@@ -138,17 +138,27 @@ SET JTSDK_PATH=%JTSDK_PATH%;%scripts_dir%
 ::------------------------------------------------------------------------------
 
 :: QT SELECTION
-:: TODO: This needs to be converted to a for loop
-SET /P var1=<%JTSDK_CONFIG%\qt.ver
-set QTV=%var1:~0,-1%
-ECHO * Checking if %QTV% is supported
-IF ["%QTV%"]==["5.12.2"] ( GOTO QT_ENV_SET )
-IF ["%QTV%"]==["5.12.3"] ( GOTO QT_ENV_SET )
-IF ["%QTV%"]==["5.12.4"] ( GOTO QT_ENV_SET )
-IF ["%QTV%"]==["5.13.0"] ( GOTO QT_ENV_SET )
-GOTO UNSUPPOERTED_QT_VERSION
+ECHO * Checking QT Version
+if exist %JTSDK_CONFIG%\qt5.12.2 (
+     set QTV=5.12.2
+     GOTO QT_ENV_SET )
+if exist %JTSDK_CONFIG%\qt5.12.3 (
+    set QTV=5.12.3
+    GOTO QT_ENV_SET )
+if exist %JTSDK_CONFIG%\qt5.12.3 (
+    set QTV=5.12.4
+    GOTO QT_ENV_SET )
+if exist %JTSDK_CONFIG%\qt5.13.0 (
+    set QTV=5.13.0
+    GOTO QT_ENV_SET
+) ELSE (
+    type nul > "%JTSDK_CONFIG%\qt5.12.4"
+    set QTV=5.12.4
+    goto QT_ENV_SET
+)
 
 :QT_ENV_SET
+ECHO Setting QT Version %QTV%
 SET PROMPT=$CQT-%QTV%$F $P ^>
 IF /I [%debug%]==[1] (
     SET title-string=JTSDK64-Tools using QT %QTV% - Debug
@@ -181,7 +191,7 @@ GOTO SET_FINAL
 :PY_TOOLS
 ECHO ^* Setting Python Tool Paths
 SET PYTOOLS=Installed
-call %LOCALAPPDATA%\Miniconda3\Scripts\activate.bat %JTSDK_HOME%\tools\python
+call %LOCALAPPDATA%\Miniconda3\Scripts\activate.bat "%LOCALAPPDATA%\Miniconda3"
 call conda activate jtpy
 
 :: Add the python scripts directory to PATH

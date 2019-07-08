@@ -2,8 +2,8 @@
 :: Name .........: jtsdk64-tools-setup.cmd
 :: Project ......: Part of the JTSDK64 Tools Project
 :: Version ......: 3.1.0
-:: Description ..: Main Environment Script
-:: Project URL ..: https://github.com/KI7MT
+:: Description ..: JTSDK64 Postinstall Setup Environment
+:: Project URL ..: https://github.com/KI7MT/jtsdk64-tools.git
 :: Usage ........: Call this file directly from the command line
 ::
 :: Author .......: Greg, Beam, KI7MT, <ki7mt@yahoo.com>
@@ -37,8 +37,8 @@ SET GIT_INSTALL_DIR=%PROGRAMFILES%\Git
 SET DOTNET_INSTALL_DIR=%PROGRAMFILES%\dotnet
 SET PYTHON_INSTALL_DIR=%LOCALAPPDATA%\Miniconda3
 
-SET PGSQL_INSTALL_DIR=%PROGRAMFILES%\PostgreSQL\11
-SET PGSQL_DATA_DIR=%LOCALAPPDATA%\PostgreSQL\11\data
+SET PGSQL_INSTALL_DIR="%PROGRAMFILES%\PostgreSQL\11"
+SET PGSQL_DATA_DIR="%LOCALAPPDATA%\PostgreSQL\11\data"
 
 SET QT_INSTALL_DIR=%TOOLS_DIR%\Qt
 SET JAVA_INSTALL_DIR=%PROGRAMFILES%\java
@@ -91,20 +91,22 @@ IF %ERRORLEVEL% == 0 ( SET JAVA_STATUS=Installed )
 
 :: Check for Python
 ECHO Checking Python
-IF EXIST "%TOOLS_DIR%\python\python.exe" ( SET PYTHON_STATUS=Installed )
+IF EXIST "%LOCALAPPDATA%\Miniconda3\python.exe" ( SET PYTHON_STATUS=Installed )
 
-IF EXIST "%TOOLS_DIR%\python\Scripts\activate.bat" (
-    call %TOOLS_DIR%\python\Scripts\activate.bat %TOOLS_DIR%\python
+ECHO Activating Mniconda Base Env
+IF EXIST "%LOCALAPPDATA%\Miniconda3\Scripts\activate.bat" (
+    call %LOCALAPPDATA%\Miniconda3\Scripts\activate.bat %LOCALAPPDATA%\Miniconda3
 )
 
-IF EXIST "%TOOLS_DIR%\python\envs\jtpy\python.exe" (
+ECHO Activating JTPY Env
+IF EXIST "%LOCALAPPDATA%\Miniconda3\envs\jtpy\python.exe" (
     call conda activate jtpy
     SET JTPY_STATUS=Enabled
 )
 
 :: PostgreSQL CHeck
 ECHO Checking PostgreSQL
-IF EXIST "%TOOLS_DIR%\PostgreSQL\11\pg_env.bat" ( SET PGSQL_STATUS=Installed )
+IF EXIST "%PROGRAMFILES%\PostgreSQL\11\pg_env.bat" ( SET PGSQL_STATUS=Installed )
 
 :: Qt Tool Chain
 ECHO Checking QT Tools

@@ -22,23 +22,23 @@ SET pgversion=11.3.4
 
 :: INSTALL MINICONDA -----------------------------------------------------------
 :INSTALL_POSTGRESQL
-CLS
+ECHO.
 ECHO --------------------------------
 ECHO Installing PostgreSQL %pgversion%
 ECHO --------------------------------
 ECHO.
 CD %SETUP_DIR%\postgres
 ECHO Running postgresql-11.3-4-windows-x64.exe^. Please Wait
-postgresql-11.3-4-windows-x64.exe^
- ^-^-mode unattended^
- ^-^-unattendedmodeui minimal^
- ^-^-superaccount postgres^
- ^-^-superpassword postgress^
- ^-^-disable-components stackbuilder^
- ^-^-enable-components server,pgAdmin,commandlinetools^
- ^-^-create_shortcuts 1^
- ^-^-prefix %PGSQL_INSTALL_DIR%^
- ^-^-datadir %PGSQL_DATA_DIR%
+postgresql-11.3-4-windows-x64.exe ^
+--mode unattended ^
+--unattendedmodeui minimal ^
+--superaccount postgres ^
+--superpassword postgress ^
+--disable-components stackbuilder ^
+--enable-components server,pgAdmin,commandlinetools ^
+--create_shortcuts 1 ^
+--prefix %PGSQL_INSTALL_DIR% ^
+--datadir %PGSQL_DATA_DIR%
 
 ECHO Verifying Installation
 IF EXIST %PGSQL_INSTALL_DIR%\bin\psql.exe (
@@ -70,7 +70,7 @@ GOTO EOF
 
 :: UNINSTALL -------------------------------------------------------------------
 :UNINSTALL
-cls
+ECHO.
 ECHO -----------------------------------------------------
 ECHO  JTSDK64 PostgreSQL Uninstall
 ECHO -----------------------------------------------------
