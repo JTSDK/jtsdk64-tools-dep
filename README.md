@@ -16,8 +16,8 @@ including [Hamlib][].
 ## Preparation
 
 Before installing `JTSDK64-Tools`, you should remove all previous version of
-`JTSDK`, particularly those elements of the installation that were installed to
-system folders such as:
+`JTSDK`, particularly those elements that were installed to system folders
+such as:
 
 - Git
 - VS Code
@@ -25,7 +25,7 @@ system folders such as:
 - Python, all Anaconda and Miniconda versions.
 - Java
 
-If you chose to leave them installed (not recommended), you will need to edit
+If you chose to leave them installed (**not recommended**), you will need to edit
 the `Global Variables and Environment` section of the `jtsdk64-setup.cmd` script
 and point the relevant paths to your current install configuration.
 
@@ -86,12 +86,12 @@ hard disk on your system.
 
 When the installer is finished, the `JTSDK64 Setup Script` will open automatically
 and you will see a list of `Installed` components. You may have one or more of
-the components such as [Git][] or [VS Code][] already installed. You can find
+the components such as [Git][] or [VS Code][] installed already. You can find
 the setup script either in the Windows Program Start Menu, or in the root
 of the install directory itself: `(C|D|E):\JTSDK64-Tools`, etc.
 
-```bash
-# Stat Menu
+```shell
+# Start Menu
 JTSDK64-Tools >> JTSDK64 Setup
 
 # For C: Drive
@@ -116,7 +116,7 @@ Regarding Qt, if you have any plans on testing / using multiple versions of Qt,
 you should select the `F` option for a full installation.
 
 >NOTE: Depending on your computer and internet speeds, this could take upwards
-of an hour or more to install; the majority of time taken by the Qt section.
+of an hour or more to complete; the majority of time taken by the Qt section.
 
 ```shell
  ---------------------------------------------------
@@ -138,21 +138,13 @@ VS Code      : y
 Postgres     : y
 Full Qt      : f
 MSYS2 Setup  : y
-
-Your Install Selections Were:
-  Python   : y
-  Git      : y
-  VS Code  : y
-  Postgres : y
-  Qt All   : f
-  MSYS2    : y
 ```
 
 ## MSYS2 Update and Configuration
 
 As with `JTSDK versoin 2`, the MSYS2 installation will need to be updated
-*before* installing hamlib dependencies. You cad do this manually with a shortcut
-or thought the menu system; the choice is yours. For consistency, this document
+*before* installing hamlib dependencies. You can do this manually with a shortcut
+or through the menu system, the choice is yours. For consistency, this document
 will be using the menu system.
 
 You can read more about the [MSYS2][] setup process from their
@@ -167,7 +159,7 @@ complete, you'll be presented with the main splash screen for
 
 #### MSYS2 Splash Screen
 
-```bash
+```shell
 JTSDK64 Tools MSYS2 using QT v
 
 For main menu, type ..: menu
@@ -208,7 +200,7 @@ close the [MSYS2][] window.
 1. Back in the `JTSDK64 Setup` environment, type **msys2** to re-lauch the console.
 1. Run the menu again, type: **menu**
 1. Select **option 6 again**
-1. Repeat **option 6** until there are not further updates.
+1. Repeat **option 6** until there are no further updates.
 
 #### Install Hamlib Dependencies
 
