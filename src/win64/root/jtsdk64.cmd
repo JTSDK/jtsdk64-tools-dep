@@ -61,8 +61,8 @@ GOTO POSTGRES_CHECK
 
 :POSTGRES_CHECK
 ECHO ^* Checking PostgreSQL
-IF EXIST "%JTSDK_HOME%\tools\PostgreSQL\11\pg_env.bat" (
-    call %JTSDK_HOME%\tools\PostgreSQL\11\pg_env.bat
+IF EXIST "%PROGRAMFILES%\PostgreSQL\11\pg_env.bat" (
+    call %PROGRAMFILES%\PostgreSQL\11\pg_env.bat
     SET POSTGRES=Installed
 )
 GOTO CORE_TOOLS
@@ -83,7 +83,6 @@ SET svnv=1.9.7
 SET cmakev=3.14.4
 SET sqlitev=3.28
 SET mongodbv=4.0.10
-
 
 :: MongoDB
 SET mongodb_dir=%JTSDK_HOME%\tools\mongodb\%mongodbv%\bin
@@ -131,7 +130,7 @@ SET "cmake_dir_f=%cmake_dir:\=/%"
 SET JTSDK_PATH=%JTSDK_PATH%;%cmake_dir%
 
 :: Scripts Directory
-SET scripts_dir=%JTSDK_HOME%\tools\scripts\cmd
+SET scripts_dir=%JTSDK_HOME%\tools\scripts
 SET JTSDK_PATH=%JTSDK_PATH%;%scripts_dir%
 
 ::------------------------------------------------------------------------------
@@ -176,13 +175,13 @@ GOTO PY_CHECK
 ::------------------------------------------------------------------------------
 
 :PY_CHECK
-IF EXIST "%JTSDK_HOME%\tools\python\Scripts\activate.bat" (GOTO PY_TOOLS)
+IF EXIST "%LOCALAPPDATA%\Miniconda3\Scripts\activate.bat" (GOTO PY_TOOLS)
 GOTO SET_FINAL
 
 :PY_TOOLS
 ECHO ^* Setting Python Tool Paths
 SET PYTOOLS=Installed
-call %JTSDK_HOME%\tools\python\Scripts\activate.bat %JTSDK_HOME%\tools\python
+call %LOCALAPPDATA%\Miniconda3\Scripts\activate.bat %JTSDK_HOME%\tools\python
 call conda activate jtpy
 
 :: Add the python scripts directory to PATH
