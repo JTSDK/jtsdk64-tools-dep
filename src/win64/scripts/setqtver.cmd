@@ -18,6 +18,7 @@ SET "validArgs=5.12.2,5.12.3,5.12.4,5.13.0"
 GOTO _MAIN
 
 :_MAIN
+CLS
 SET tmp_file=%JTSDK_CONFIG%\qt.ver
 ECHO ----------------------------------
 ECHO JTSDK64 Tools QT Version Selection

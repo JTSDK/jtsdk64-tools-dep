@@ -220,7 +220,7 @@ associated build-details will be printed in the summary.
 ## Conclusion
 
 At this point in the installation, the environment should be ready to build
-[WSJTX][] or be used for any number of other purposes. When the user guide is
+[WSJT-X][] or be used for any number of other purposes. When the user guide is
 complete, it will be posted to a Github.io page.
 
 ## Community Support
