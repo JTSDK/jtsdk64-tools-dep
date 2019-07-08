@@ -1,6 +1,0 @@
-== Cost Benifit Analysis
-
-Put some cool stuff in here that makes sense.
-
-.Cost Benifit Analysis-1
-image::cba1.png[]
