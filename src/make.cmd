@@ -112,14 +112,17 @@ ECHO Installing JT64 Common
 ECHO ----------------------
 pip install jt64common -U
 
+ECHO.
 ECHO Installing JT64 Eenv
 ECHO ----------------------
-pip install jt64environment -U
+pip install jt64env -U
 
+ECHO.
 ECHO Installing JT64 Gentc
 ECHO ----------------------
 pip install jt64gentc -U
 
+ECHO.
 ECHO Installing JT64 Version
 ECHO -----------------------
 pip install jt64version -U
@@ -128,20 +131,20 @@ POPD
 
 :: Change Directories to src\win64
 PUSHD %CD%\win64
-
+ECHO.
 ECHO  Installing Win64 Setup Files
-robocopy %CD%\setup %JTSDK_HOME%\tools\setup /E /MIR
+robocopy %CD%\setup %JTSDK_HOME%\tools\setup /E /NFL /NDL /NJH /NJS /nc /ns /np
 
 ECHO  Installing Win64 Scripts
-robocopy %CD%\scripts %JTSDK_HOME%\tools\scripts /E /MIR
+robocopy %CD%\scripts %JTSDK_HOME%\tools\scripts /E /NFL /NDL /NJH /NJS /nc /ns /np
 
 ECHO  Installing Win64 Root Files
-robocopy %CD%\root %JTSDK_HOME% /NFL /NDL /NJH /NJS /nc /ns /np
+robocopy %CD%\root %JTSDK_HOME% /E /NFL /NDL /NJH /NJS /nc /ns /np
 
 POPD
 
 :: Finished installation
-ECHO   Finished
+ECHO  Finished
 GOTO EOF
 
 :: ----------------------------------------------------------------------------
