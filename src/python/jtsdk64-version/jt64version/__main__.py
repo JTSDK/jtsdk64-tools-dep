@@ -56,7 +56,7 @@ def get_git_version():
 
 def get_libusb_version():
     """Get Libsub Version"""
-    base_path = os.environ['JTSDK64_HOME']
+    base_path = os.environ['JTSDK_HOME']
     file_name = "libusb-1.0.def"
     file_path = os.path.join(base_path, "tools", "libusb", "1.0.22", file_name)
 
@@ -119,7 +119,7 @@ def get_gcc_version():
 
 
 def list_tcfiles():
-    file_path = os.path.join(os.environ["JTSDK64_HOME"], "tools", "tcfiles")
+    file_path = os.path.join(os.environ["JTSDK_HOME"], "tools", "tcfiles")
     files = os.listdir(file_path)
     return files
 

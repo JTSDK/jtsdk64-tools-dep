@@ -3,7 +3,7 @@
 | Application Data ||
 | ---| --- |
 | Package             | `jt64version`
-| Version             | 0.0.16
+| Version             | 0.0.18
 | Topic               | Communications, Ham Radio
 | Development Status  | 4 - Beta
 | Distributions       | Windows, Linux

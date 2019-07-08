@@ -12,7 +12,7 @@ from jt64gentc import __name__
 from jt64gentc import __summary__
 
 # process variables
-base_path = os.environ["JTSDK64_HOME"]
+base_path = os.environ["JTSDK_HOME"]
 tc_dir = os.path.join(base_path, "tools", "tcfiles")
 script_name = os.path.basename(__file__)
 
