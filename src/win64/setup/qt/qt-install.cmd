@@ -53,7 +53,7 @@ ECHO Sarting Qt Installation. Cick "NEXT" on the Welcome screen,
 ECHO then the installer script will do the rest.
 ECHO.
 CD %SETUP_DIR%\qt
-qt-unified-windows-x86-online.exe --script .\qt-%script%-install.qs
+qt-unified-windows-x86-3.1.1-online.exe --script .\qt-%script%-install.qs
 IF %ERRORLEVEL% == 0 (
     ECHO Install Check Passed
     GOTO INSTALL_SUMMARY

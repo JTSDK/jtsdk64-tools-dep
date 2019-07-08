@@ -47,3 +47,6 @@ ECHO     VS Code ...... codesetup help
 ECHO     Python ....... pysetup help
 ECHO     Qt ........... qtetup help
 ECHO.
+ECHO  Post Installation
+ECHO  To run the post installation script, type: postinstall
+ECHO.

@@ -125,6 +125,7 @@ DOSKEY pysetup-all = call %SETUP_DIR%\miniconda\pysetup-all.cmd
 DOSKEY pgsetup = call %SETUP_DIR%\postgres\postgresql-install.cmd $*
 DOSKEY qtsetup = call %SETUP_DIR%\qt\qt-install.cmd $*
 DOSKEY codesetup = call %SETUP_DIR%\vscode\vscode-install.cmd $*
+DOSKEY postinstall = call %SETUP_DIR%\jtsdk64-postinstall.cmd
 DOSKEY home = cd /d %JTSDK_HOME% $T %SETUP_DIR%\cmd\greeting.cmd
 
 ::------------------------------------------------------------------------------

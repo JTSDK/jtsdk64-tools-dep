@@ -44,7 +44,7 @@ SET JTSDK_CONFIG=%JTSDK_HOME%\config
 SET JTSDK_DATA=%JTSDK_HOME%\data
 SET JTSDK_SRC=%JTSDK_HOME%\src
 SET JTSDK_TMP=%JTSDK_HOME%\tmp
-SET JTSDK_SCRIPTS=%JTSDK_HOME%\tools\scripts\python
+SET JTSDK_SCRIPTS=%JTSDK_HOME%\tools\scripts
 
 :: Create Folders
 ECHO ^* Creating Directories
@@ -134,13 +134,14 @@ SET JTSDK_PATH=%JTSDK_PATH%;%cmake_dir%
 SET scripts_dir=%JTSDK_HOME%\tools\scripts\cmd
 SET JTSDK_PATH=%JTSDK_PATH%;%scripts_dir%
 
-
 ::------------------------------------------------------------------------------
 :: CONDITIONAL PATHS for Multiple versions of Qt
 ::------------------------------------------------------------------------------
 
 :: QT SELECTION
-SET /P QTV=<%CD%\config\qt.ver
+:: TODO: This needs to be converted to a for loop
+SET /P var1=<%JTSDK_CONFIG%\qt.ver
+set QTV=%var1:~0,-1%
 ECHO * Checking if %QTV% is supported
 IF ["%QTV%"]==["5.12.2"] ( GOTO QT_ENV_SET )
 IF ["%QTV%"]==["5.12.3"] ( GOTO QT_ENV_SET )
@@ -215,6 +216,7 @@ GOTO SET_DOSKEYS
 ::------------------------------------------------------------------------------
 ECHO ^* Generating Doskey^'s
 DOSKEY msys2 = %JTSDK_HOME%\tools\msys64\msys2_shell.cmd
+DOSKEY setqt = %JTSDK_SCRIPTS%\setqtver.cmd
 DOSKEY jtversion = call python jt64version $*
 DOSKEY jtenv = call python jt64env $*
 DOSKEY jt64help = python -c "from jt64common.help import jt64_main_help; jt64_main_help()"
