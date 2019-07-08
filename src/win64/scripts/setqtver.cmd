@@ -19,7 +19,6 @@ GOTO _MAIN
 
 :_MAIN
 CLS
-SET tmp_file=%JTSDK_CONFIG%\qt.ver
 ECHO ----------------------------------
 ECHO JTSDK64 Tools QT Version Selection
 ECHO ----------------------------------
