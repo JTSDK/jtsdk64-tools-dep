@@ -270,4 +270,3 @@ and implement the final disposition.
 [Git]: https://git-scm.com/
 [VS Code]: https://code.visualstudio.com/Download
 [Issue Tracker]: https://github.com/KI7MT/jtsdk64-tools/issues
-[JTSDK64-Version-3.1.0]: https://sourceforge.net/projects/jtsdk/files/win32/3.1.0/
