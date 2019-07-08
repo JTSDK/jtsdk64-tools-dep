@@ -1,0 +1,36 @@
+== Current System Overview
+
+The Information Technology (<<it,IT>>) manager is the contract system
+administrator. Users of the system include, but are not limited to: President,
+Business Unit Manager, Contract Officer, Accounting, Office Administration
+and Engineering personnel.
+
+.Company Organization
+image::org-chart.png[{half-width},align=center,alt="Company Organization"]
+
+Contract opportunities can originate from any number of sources: Sales, Marketing,
+Direct Engineering, and sector-specific Request for Quotation (<<rfq,RFQ>>).
+
+While initiation can be internal, or external, the iterative approval process
+is grounded at the engineering level. Commercial interests are managed by
+the sales force, and championed by the business unit managers. Final contract
+acceptance resides with the company\'s president.
+
+.User Diagram
+image::Current_System_Use_Diagram.JPG[{half-width},align=center,alt="User Diagram"]
+
+As with many small companies, key employees are responsible for fulfilling
+several critical business roles; such is the case with <<gwe,GWE>>.
+Administration of any given contract is managed, accounted for, and analyzed
+by a small number of employees. Often times, executive-level managers take on
+multiple roles in order to cover core business requirements. This multi-role
+environment mandates a high-level of system automation, and integration into 
+existing business applications.
+
+<<contract-workflow-diagram>> shows the typical contract routing path for the
+majority of {gwe} negotiations. While exceptions are possible, most adhere to
+the routing indicated.
+
+[[contract-workflow-diagram]]
+.Contract Workflow Diagram
+image::Contract_Workflow_Diagram.JPG[{half-full},align=center,alt="Workflow Diagram"]

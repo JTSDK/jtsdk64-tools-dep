@@ -1,0 +1,14 @@
+== Current Data Warehouse
+
+// TO-DO: Quinn - What is the name of the GWE Contract Desktop Application?
+The current contract system at {gweshort} is backed by a {mssql} ({mssqlshort}).
+The Entity Data Model (<<edm,EDM>>) includes information such as: client name,
+contract ID, project name, number, and effective dates. The method of finalizing
+a client contract is processed through the server by way of a single instance
+Windows desktop application.
+
+<<current-system-edm>> outlines the current model.
+
+[[current-system-edm]]
+.Current System EDM
+image::current-gwe-erd.png[{half-full},align=center,alt="Current EDM"]

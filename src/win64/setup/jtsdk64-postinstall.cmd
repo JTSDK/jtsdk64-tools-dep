@@ -49,6 +49,7 @@ echo   Qt All   : %UserInputQt%
 echo   MSYS2    : %UserInputMsys2%
 ECHO.
 
+exit /b 0
 :: -----------------------------------------------------------------------------
 :: SELECTIONS
 :: -----------------------------------------------------------------------------
@@ -133,6 +134,17 @@ ECHO.
 ECHO  Finished Post Installation
 ECHO. Exit the JTSDK64 Tools Setup Environment, and
 ECHO  re-open to see the current status of installed tools.
+if /I "%UserInputMsys2%" == "Y" (
+ECHO.
+ECHO  MSYS2 Initial Setup requires several rounds of installs.
+ECHO  Following the MSYS on screem messages to perform the Initial
+ECHO  installation and updates.
+ECHO.
+ECHO  Aftter updating MSYS2 itself, select the appropriate menu
+ECHO  option to install Hamlib Dependencies.
+ECHO.
+)
+
 ECHO.
 GOTO _MSG
 

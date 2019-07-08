@@ -1,0 +1,26 @@
+== Conclusions
+
+The analysis team outlined three viable proposals that would solve the reporting
+deficiency {gweshort} originally requested. Through the process of formulating
+solutions, the analysis soon  revealed a larger need to refresh the current
+technology implementation. Not only will upgrading the current architecture
+facilitate cost reductions, it will also allow for tighter integration between
+{gweshort}'s accounting system (<<ajera,Ajera>>).
+
+Leveraging modern <<webapi,Web API>> framework languages such as 
+<<csharp,{CSHARP}>> and <<dot.net,Dot.NET>> will allow the solution to
+dynamically expand with the growth of {gweshort} without high-cost iterative
+development cycles. Leveraging local programming expertise such as the 
+Helena College CT program can all but eliminate development costs.
+
+Synonymous with cost reduction realization is the added efficiency multi-device
+access brings in terms of employee benefit. Users will be able to manage the 
+contract system from a wide range of devices rather than being anchored to
+a desktop application.
+
+The final advantage to an enterprise-level web interface is the ability access
+multiple data sources simultaneously. Through proper user access controls, {gweshort}
+can further improve efficiency, reduce or eliminate duplicate customer account 
+information, and improved margin analysis accuracy by maintaining alignment between
+<<ajera,Ajera>> and the contracts management system.
+

@@ -1,0 +1,26 @@
+== Proposal Benefits
+
+The first objective is to restructure the back-end data model using modern
+framework development tools; thus, eliminating the reliance upon costly, and
+in most cases, outdated software languages. As part of the restructuring, a
+data model migration that mirrors the company’s accounting infrastructure will
+be achieved. This migration is critical for the ease of implementing future ties
+between the two technologies.
+
+Coupled with data model restructuring is the implementation of a modern,
+multi-device interface; known in industry terms as an <<webapi,Web API>>.
+The <<webapi,Web API>> allows for easy access from a number of different platforms,
+both in and outside the company’s Intranet environment. The Virtual Private Network
+(<<vpn,VPN>>) currently employed is more than adequate to accommodate such
+connections, and ensure adequate levels of security.
+
+Tying the data model to the refreshed access mythology will be enabled the use
+of modern programming frameworks. Implementing such frameworks brings the added
+benefit of reduced development costs, cycle times, and ensuring longevity within
+development community.
+
+Productivity, ease of administration, and financial reporting requirements are,
+by design, implemented within our proposal. Keeping step with <<gaap,GAAP>>, and
+<<fasb,FASB>> reporting requirements in the <<ajera,Ajera>> accounting system
+will, by default, flow through and be included in the contracts management
+system.

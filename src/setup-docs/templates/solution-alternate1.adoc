@@ -1,0 +1,31 @@
+== Alternate Solution-1
+
+Add the scop of our primary solution
+
+=== Hardware Requirments
+
+Detail, as best as possible, hardware requirments and cost
+
+.Servers
+What APplication Servers do we need
+
+.Connection Devices
+Describe what types of connection devices can access the Web-API
+
+.Virtul Private Networks
+What private network requirments are there 
+
+=== Software
+Define system and user based software requirments
+
+.Framrwoks Advantages
+What the advantages of the frameworks propoded
+
+.Freamwork Disadvantages
+What are some Framework disatvangates
+
+=== Development Model
+
+Define a more traditional development, testing, and release Model
+
+

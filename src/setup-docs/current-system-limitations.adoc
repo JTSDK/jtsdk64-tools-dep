@@ -1,0 +1,73 @@
+== Current System Limitations
+
+// TO-DO: Opening sentence is awkward to read. Consider re-phrasing.
+The main limitations of the current desktop application are the difficulty of
+expansion and total lack of reporting capabilities. The <<it,IT>> Manager must
+extract data from {mssqlshort} using manual queries. The user interface is hard
+coded and was not designed to provide data extraction. The manual process of
+entry and extraction is time-consuming, inefficient, and prone to errors.
+While the current <<edm,EDM>> provides a fair amount of employee, and contractual
+data, it falls short with integration into the companies accounting package
+(<<ajera,Ajera>>). 
+
+<<desired-option-matrix>> provides a brief list of items any new proposal must
+accomodate, and status of the current implementation:
+
+[[desired-option-matrix]]
+.Desired Options Matrix
+[cols="1,^1,^1,1", options="header, autowidth"]
+|===
+|Option|Proposed|Current|Description
+
+|Access via VPN
+|{y}
+|{y}
+|Access database via VPN Tunnel
+
+|Routing and Approval
+|{y}
+|{y}
+|Methods for approval and comments
+
+|Platform Independent
+|{y}
+|{n}
+|Database access via Windows, Linux, Mac OSX
+
+|Portable Device Access
+|{y}
+|{n}
+|Access application from Mobile, Desktop, or Phone
+
+|Custom Reports
+|{y}
+|{n}
+|Provide default, and custom reports
+
+|Easy Interface to <<ajera,Ajera>>
+|{y}
+|{n}
+|API to allow access to customer data
+
+|Modern Application Framework
+|{y}
+|{n}
+|Use current day technologies to lower cost
+
+|Data Storage Mapping
+|{y}
+|{n}
+|Manage multiple file storage locations
+
+|Multi-Level Permission Control
+|{y}
+|{n}
+|Allow custom user level access
+
+|Cloud Storage Capable
+|{o}
+|{o}
+|Host Data in Cloud
+
+|===
+{y} = Capable, {n} Not Capable, {o} = Optional

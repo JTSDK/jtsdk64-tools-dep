@@ -1,0 +1,99 @@
+== First Alternative
+Our first alternative is to port the current application to <<java,Java>>.
+It is one of the top programming languages and it's used in many 
+modern applications all over the world. <<java,Java>> is object-oriented,
+allowing for modular application development.
+
+// turn numbering off for inner sections
+:numbered!:
+
+=== Objective
+Our <<webapi,Web API>> proposal consists of rebuilding the front, and back-end
+of the contract management system. Using <<java,Java>> will allow {gweshort} to
+bypass the rebuild, to the back-end, required for the <<webapi,Web API>>. While
+{gweshort} would still benefit from a rebuild of the back-end, which could
+still be done with a <<java,Java>> implementation, it's not required to develop
+a reporting module. 
+
+=== Benefits
+<<java,Java>> can be developed using open source <<ide,IDE>>'s allowing {gweshort}
+to avoid licensing fees associated with enterprise level <<ide,IDE>>'s.
+<<java,Java>> is a language taught in the region, this provides an additional
+benefit of a more competitive market.
+
+* Ability to end current maintenance contract.
+
+* <<java,Java>> is cross-platform, meaning it can be installed on several
+different operating systems.
+
+* Flexability on development provides additional cost savings.
+
+* Large number of developers creating a competitive market.
+
+=== Cost Analysis
+Considering the flexability of a <<java,Java>> implementation, our team has
+provided a breakdown of the different routes {gweshort} could pursue to handle
+the needs of the company, while keeping costs to a minimum. 
+
+[black]*Port current application while adding a reporting module*
+
+* 10k/yr current application maintenance cost ($833.33/mo)
+* Developer cost per hour fixed at $52.00
+* 80 hours to port the main application, add reporting module, and rewrite links
+to the database.* Cumulative monthly benefit ($206.67) for {gweshort} employees
+(conservative estimate) * Sustaining costs are higher than recommended proposal
+due to the nature of a desktop implementation, requiring installs on every
+device, estimating 8hrs/mo ($416) 
+
+Values are represented in <<alt1-cba-breakdown-matrix>> accross three tables
+Employee Benefit, Developer Costs, and Sustaining Costs.
+
+[[alt1-cba-breakdown-matrix]]
+.Alt1 Cost/Benefit Breakdown
+image::alt1-cba-3.png[{half-width75},align=center,alt="Alt1 Cost/Benefit Breakdown"]
+
+
+<<alt1-cba-cost-matrix>> lists the current application maintenance costs and the
+employee benefit added together as benefits. The maintenance cost benefit will
+vary depending on when {gweshort} makes this payment, for the purpose of this
+<<cba,CBA>> the maintenance costs are paid monthly. Costs are shown as an upfront
+payment for development of the <<java,Java>> application, followed by monthly 
+sustaining costs.
+
+[[alt1-cba-cost-matrix]]
+.Alt1 Cost Analysis Matrix
+image::alt1-cba-2.png[{half-width75},align=center,alt="Alt1 Cost Analysis Matrix"]
+
+Our analysis shows recovery happening at approximately seven months,
+as seen in <<alt1-cba-cost-graph>>. 
+
+
+[[alt1-cba-cost-graph]]
+.Alt1 Cost Analysis Graph
+image::alt1-cba-1.png[{half-width75},align=center,alt="Alt1 Cost Analysis Graph"]
+
+[black]*Port current application, add reporting module, and database rebuild*
+
+* Additional 40 hours required for database rebuild.
+
+* 8 hours to create data migration application.
+
+As seen in <<alt1-cba-updated-breakdown>> we have updated the Developer Costs
+table to account for the addition hours required to handle the back-end.
+
+[[alt1-cba-updated-breakdown]]
+.Alt1 Updated Cost/Benefit Breakdown
+image::alt1-cba-3-1.png[{half-width75},align=center,alt="Alt1 Updated Cost/Benefit Breakdown"]
+
+While recovery is not seen until approximately the eleven month mark (<<alt1-cba-updated-cost-graph>>), 
+{gweshort}'s new system will be more scalable. This intangable benefit will most
+likely go unnoticed. However, this will simplify integration into other systems
+as {gweshort} adapts to future needs. 
+
+[[alt1-cba-updated-cost-graph]]
+.Alt1 Updated Cost Analysis Graph
+image::alt1-cba-1-1.png[{half-width75},align=center,alt="Alt1 Updated Cost Analysis Graph"]
+
+
+// do not take this out
+:numbered:

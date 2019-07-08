@@ -1,0 +1,70 @@
+= JTSDK64 Tools Setup
+:doctype: book
+:author: Greg Beam, KI7MT
+:reproducible:
+:source-highlighter: coderay
+:listing-caption: Listing
+:pdf-page-size: Letter
+:toc: left
+:toc-title: Setup and Configuration
+:xrefstyle: full
+:icons: font
+:imagesdir: images
+:experimental:
+:numbered: 2
+
+:source-highlighter: coderay
+:y: icon:check[role="green"]
+:n: icon:times[role="red"]
+:o: icon:circle-thin[role="blue"]
+:sr: icon:exclamation-circle[role="red"]
+:sb: icon:sticky-note[role="blue"]
+:sg: icon:stop[role="green"]
+:ub: icon:tty[role="yellow"]
+
+:front-cover-image: image:gw-main.png[Front Cover]
+
+ifdef::backend-html5[]
+:twoinches: width='144'
+:full-width: width='100%'
+:half-width: width='60%'
+:half-width75: width='75%'
+:half-size:
+:thumbnail: width='60'
+endif::[]
+
+// Files to include in Main Document
+ifndef::imagesdir[:imagesdir: ../images]
+
+include::links.adoc[]
+
+include::executive-summary.adoc[]
+
+include::business-description.adoc[]
+
+include::current-system-overview.adoc[]
+
+include::current-data-wearhouse.adoc[]
+
+include::current-system-limitations.adoc[]
+
+include::needs-assessment.adoc[]
+
+// include::background-information.adoc[] garbage
+
+include::proposal-objectives.adoc[]
+
+include::proposal-scope.adoc[]
+
+include::proposal-benefits.adoc[]
+
+include::proposal-cba.adoc[]
+
+include::proposed-alternative1.adoc[]
+
+include::proposed-alternative2.adoc[]
+
+include::conclusion.adoc[]
+
+[glossary]
+include::glossary.adoc[]

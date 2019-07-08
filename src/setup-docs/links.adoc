@@ -1,0 +1,19 @@
+//
+// Add as needed / appropriate
+//
+
+// Substitutions - use shortcuts to expand whole words throught the document
+:cpp: C++
+:CPP: C++
+:csharp: C#
+:CSHARP: C#
+
+//Web Links - use this as a guide
+:gwe: https://www.greatwesteng.com/index.html[GWE]
+:gweshort: https://www.greatwesteng.com/index.html[GWE]
+:gwelong: https://www.greatwesteng.com/index.html[Great West Engineering]
+
+:ieee-rank: https://spectrum.ieee.org/computing/software/the-2017-top-programming-languages[Top 5]
+
+:mssqlshort: https://www.microsoft.com/en-us/sql-server/sql-server-2017-editions[MS-SQL]
+:mssql: https://www.microsoft.com/en-us/sql-server/sql-server-2017-editions[Microsoft Enterprise SQL Server]

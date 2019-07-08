@@ -35,12 +35,13 @@ SET CURL_DIR=%SETUP_DIR%\curl\bin
 :: Global Environment Variables Variables
 SET GIT_INSTALL_DIR=%PROGRAMFILES%\Git
 SET DOTNET_INSTALL_DIR=%PROGRAMFILES%\dotnet
-SET DOTNET_INSTALL_DIR=%PROGRAMFILES%\dotnet
-SET PYTHON_INSTALL_DIR=%TOOLS_DIR%\python
+SET PYTHON_INSTALL_DIR=%LOCALAPPDATA%\Miniconda3
+
+SET PGSQL_INSTALL_DIR=%PROGRAMFILES%\PostgreSQL\11
+SET PGSQL_DATA_DIR=%LOCALAPPDATA%\PostgreSQL\11\data
+
 SET QT_INSTALL_DIR=%TOOLS_DIR%\Qt
-SET PGSQL_INSTALL_DIR=%TOOLS_DIR%\PostgreSQL\11
-SET PGSQL_DATA_DIR=%TOOLS_DIR%\PostgreSQL\11\data
-SET JAVA_INSTALL_DIR=%TOOLS_DIR%\java
+SET JAVA_INSTALL_DIR=%PROGRAMFILES%\java
 SET PATH=%JTSDK_HOME%;%TOOLS_DIR%;%SETUP_DIR%;%CURL_DIR%;%PATH%
 
 ::------------------------------------------------------------------------------
@@ -61,6 +62,9 @@ SET QT5124_STATUS=Not Installed
 SET QT5130_STATUS=Not Installed
 SET DOTNET_STATUS=Not Installed
 SET JAVA_STATUS=Not Installed
+SET ANT_STATUS=Not Installed
+SET MAVEN_STATUS=Not Installed
+SET GRADLE_STATUS=Not Installed
 SET VSCODE_STATUS=Not Installed
 GOTO APP_CHECK
 
@@ -119,6 +123,7 @@ GOTO _DOSKEYS
 ::------------------------------------------------------------------------------
 
 :_DOSKEYS
+DOSKEY msys2 = %JTSDK_HOME%\tools\msys64\msys2_shell.cmd
 DOSKEY gitsetup = call %SETUP_DIR%\git\git-install.cmd $*
 DOSKEY pysetup = call %SETUP_DIR%\miniconda\python-install.cmd $*
 DOSKEY pysetup-all = call %SETUP_DIR%\miniconda\pysetup-all.cmd
