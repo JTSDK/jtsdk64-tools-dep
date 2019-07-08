@@ -170,10 +170,10 @@ ECHO   Alternatively, you can manyally set the
 ECHO   JTSDK_HOME variable with the following:
 ECHO.
 ECHO   C-Drive Location
-ECHO   set JTSDK_HOME=C:\JTSDK-Tools
+ECHO   set JTSDK_HOME=C:\JTSDK64-Tools
 ECHO.
 ECHO   D-Drive Location
-ECHO   set JTSDK_HOME=D:\JTSDK-Tools
+ECHO   set JTSDK_HOME=D:\JTSDK64-Tools
 ECHO.
 ECHO   Then re-run your commands.
 ECHO.
