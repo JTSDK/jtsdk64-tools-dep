@@ -101,7 +101,16 @@ if /I "%UserInputQt%" == "N" (
 if /I "%UserInputQt%" == "D" (
     set install=Y
     set step=QT Default Install
-    call %SETUP_DIR%\qt\qtinstall.cmd min
+    call %SETUP_DIR%\qt\qt-install.cmd min
+    if %ERRORLEVEL% EQU 0 GOTO _MSYS2SELECTION
+    goto error_message
+)
+
+:: If option == N, install full set of QT options
+if /I "%UserInputQt%" == "Y" (
+    set install=Y
+    set step=QT Full Install
+    call %SETUP_DIR%\qt\qt-install.cmd full
     if %ERRORLEVEL% EQU 0 GOTO _MSYS2SELECTION
     goto error_message
 )
@@ -110,7 +119,7 @@ if /I "%UserInputQt%" == "D" (
 if /I "%UserInputQt%" == "F" (
     set install=Y
     set step=QT Full Install
-    call %SETUP_DIR%\qt\qtinstall.cmd full
+    call %SETUP_DIR%\qt\qt-install.cmd full
     if %ERRORLEVEL% EQU 0 GOTO _MSYS2SELECTION
     goto error_message
 )
