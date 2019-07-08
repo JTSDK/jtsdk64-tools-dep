@@ -251,23 +251,23 @@ high-quality, yet flexible build system. Utilizing Github's [Issue Tracker][].
 users can quickly see the status of any particular request, discuss the merits,
 and implement the final disposition.
 
-[Open Source]: `https://opensource.com/resources/what-open-source`
-[WSJT]: `http://physics.princeton.edu/pulsar/K1JT/`
-[WSJT-X]: `http://physics.princeton.edu/pulsar/K1JT/wsjtx.html`
-[MAP65]: `http://physics.princeton.edu/pulsar/K1JT/map65.html`
-[WSPR]: `http://physics.princeton.edu/pulsar/K1JT/wspr.html`
-[MSYS2]: `https://www.msys2.org/`
-[PostgreSQL]: `https://www.postgresql.org/`
-[Dotnet Core SDK]: `https://docs.microsoft.com/en-us/dotnet/core/sdk`
-[Java Open JDK]: `https://adoptopenjdk.net/`
-[Ant]: `https://ant.apache.org/`
-[Maven]: `https://maven.apache.org/`
-[Gradle]: `https://gradle.org/`
-[InnoSetup]: `http://www.jrsoftware.org/isinfo.php`
-[Hamlib]:`https://hamlib.github.io/`
-[JTSDK Sourceforge]: `https://sourceforge.net/projects/jtsdk/files/win32/3.1.0/`
-[JTSDK64-Version-3.1.0]: `https://sourceforge.net/projects/jtsdk/files/win32/3.1.0/jtsdk64-tools-3.1.0.exe`
-[Git]: `https://git-scm.com/`
-[VS Code]: `https://code.visualstudio.com/Download`
-[Issue Tracker]: `https://github.com/KI7MT/jtsdk64-tools/issues`
-[JTSDK64-Version-3.1.0]: `https://sourceforge.net/projects/jtsdk/files/win32/3.1.0/`
+[Open Source]: https://opensource.com/resources/what-open-source
+[WSJT]: http://physics.princeton.edu/pulsar/K1JT/
+[WSJT-X]: http://physics.princeton.edu/pulsar/K1JT/wsjtx.html
+[MAP65]: http://physics.princeton.edu/pulsar/K1JT/map65.html
+[WSPR]: http://physics.princeton.edu/pulsar/K1JT/wspr.html
+[MSYS2]: https://www.msys2.org/
+[PostgreSQL]: https://www.postgresql.org/
+[Dotnet Core SDK]: https://docs.microsoft.com/en-us/dotnet/core/sdk
+[Java Open JDK]: https://adoptopenjdk.net/
+[Ant]: https://ant.apache.org/
+[Maven]: https://maven.apache.org/
+[Gradle]: https://gradle.org/
+[InnoSetup]: http://www.jrsoftware.org/isinfo.php
+[Hamlib]: https://hamlib.github.io/
+[JTSDK Sourceforge]: https://sourceforge.net/projects/jtsdk/files/win32/3.1.0/
+[JTSDK64-Version-3.1.0]: https://sourceforge.net/projects/jtsdk/files/win32/3.1.0/jtsdk64-tools-3.1.0.exe
+[Git]: https://git-scm.com/
+[VS Code]: https://code.visualstudio.com/Download
+[Issue Tracker]: https://github.com/KI7MT/jtsdk64-tools/issues
+[JTSDK64-Version-3.1.0]: https://sourceforge.net/projects/jtsdk/files/win32/3.1.0/
