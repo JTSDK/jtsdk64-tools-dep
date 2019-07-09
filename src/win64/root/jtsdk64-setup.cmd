@@ -125,6 +125,13 @@ GOTO _DOSKEYS
 ::------------------------------------------------------------------------------
 
 :_DOSKEYS
+
+:: create a doskey file for users if it does not exist
+IF NOT EXIST %JTSDK_HOME%\%username%-doskey.cmd (
+    type nul > %JTSDK_HOME%\%username%-doskey.cmd
+    ECHO REM JTSDK64 DOSKEY File for User ^: %username% > %username%-doskey.cmd
+)
+
 DOSKEY msys2 = %JTSDK_HOME%\tools\msys64\msys2_shell.cmd
 DOSKEY gitsetup = call %SETUP_DIR%\git\git-install.cmd $*
 DOSKEY pysetup = call %SETUP_DIR%\miniconda\python-install.cmd $*

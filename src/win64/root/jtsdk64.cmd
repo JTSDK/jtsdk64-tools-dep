@@ -158,7 +158,7 @@ if exist %JTSDK_CONFIG%\qt5.13.0 (
 )
 
 :QT_ENV_SET
-ECHO Setting QT Version %QTV%
+ECHO ^* Setting QT Version %QTV%
 SET PROMPT=$CQT-%QTV%$F $P ^>
 IF /I [%debug%]==[1] (
     SET title-string=JTSDK64-Tools using QT %QTV% - Debug
@@ -224,13 +224,18 @@ GOTO SET_DOSKEYS
 :: GENERATE DOSKEY's
 ::------------------------------------------------------------------------------
 ECHO ^* Generating Doskey^'s
+
+:: create a doskey for for users if not exist
+IF EXIST "%cd%\%username%-doskey.cmd" (
+    call "%cd%\%username%-doskey.cmd"
+)
 DOSKEY msys2 = %JTSDK_HOME%\tools\msys64\msys2_shell.cmd
 DOSKEY setqt = %JTSDK_SCRIPTS%\setqtver.cmd
-DOSKEY jtversion = call python jt64version $*
-DOSKEY jtenv = call python jt64env $*
-DOSKEY jt64help = python -c "from jt64common.help import jt64_main_help; jt64_main_help()"
+DOSKEY jtenv = jt64env $*
+DOSKEY jtgentc = jt64gentc $*
+DOSKEY jtversion = jt64version $*
+DOSKEY jthelp = python -c "from jt64common.help import jt64_main_help; jt64_main_help()"
 DOSKEY home = CD %JTSDK_HOME% $T call python -c "from jt64common.messages import main_header_message; main_header_message()"
-DOSKEY jtgentc = call jt64gentc $*
 DOSKEY srcd = CD %JTSDK_HOME%/src
 DOSKEY clear=cls
 DOSKEY ls = ls --color=tty $*
