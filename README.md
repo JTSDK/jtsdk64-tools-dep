@@ -74,7 +74,7 @@ installer available at [JTSDK SourceForge][].
 
 ### Download Installer
 
-- Download [JTSDK64-Version-3.1.0][]
+- Download [JTSDK64-Tools-3.1.0][]
 
 Once downloaded, run the installer and follow the prompts. The install location
 is fixed to a specific folder, however, you may select whatever drive suites
@@ -257,8 +257,8 @@ and implement the final disposition.
 [Gradle]: https://gradle.org/
 [InnoSetup]: http://www.jrsoftware.org/isinfo.php
 [Hamlib]: https://hamlib.github.io/
-[JTSDK Sourceforge]: https://sourceforge.net/projects/jtsdk/files/win32/3.1.0/
-[JTSDK64-Version-3.1.0]: https://sourceforge.net/projects/jtsdk/files/win32/3.1.0/jtsdk64-tools-3.1.0.exe
+[JTSDK Sourceforge]: https://sourceforge.net/projects/jtsdk/files/win64/3.1.0/
+[JTSDK64-Tools-3.1.0]: https://sourceforge.net/projects/jtsdk/files/win64/3.1.0/jtsdk64-tools-3.1.0.exe
 [Git]: https://git-scm.com/
 [VS Code]: https://code.visualstudio.com/Download
 [Issue Tracker]: https://github.com/KI7MT/jtsdk64-tools/issues
