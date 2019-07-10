@@ -3,7 +3,7 @@
 | Application Data ||
 | ---| --- |
 | Package             | `jt64env`
-| Version             | 0.0.16
+| Version             | 0.0.17
 | Topic               | Communications, Ham Radio
 | Development Status  | 4 - Beta
 | Distributions       | Windows, Linux
@@ -54,7 +54,6 @@ conda activate jtpy
 # Upgrade the package
 pip install jt64env -U
 ```
-
 
 ## Usage
 
