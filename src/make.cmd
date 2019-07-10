@@ -110,23 +110,23 @@ ECHO ------------------------------
 ECHO.
 ECHO Installing JT64 Common
 ECHO ----------------------
-pip install jt64common -U
+pip install ^-I^, ^-^-ignore^-installed ^-r %CD%\win64\cmd\requirements.txt
 
-ECHO.
-ECHO Installing JT64 Eenv
-ECHO ----------------------
-pip install jt64env -U
+REM ECHO.
+REM ECHO Installing JT64 Eenv
+REM ECHO ----------------------
+REM pip install jt64env -U
 
-ECHO.
-ECHO Installing JT64 Gentc
-ECHO ----------------------
-pip install jt64gentc -U
+REM ECHO.
+REM ECHO Installing JT64 Gentc
+REM ECHO ----------------------
+REM pip install jt64gentc -U
 
-ECHO.
-ECHO Installing JT64 Version
-ECHO -----------------------
-pip install jt64version -U
-ECHO.
+REM ECHO.
+REM ECHO Installing JT64 Version
+REM ECHO -----------------------
+REM pip install jt64version -U
+REM ECHO.
 POPD
 
 :: Change Directories to src\win64

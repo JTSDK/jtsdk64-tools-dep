@@ -1,3 +1,8 @@
 certifi
 colorconsole
 wincertstore
+jt64common
+jt64env
+jt64gentc
+jt64version
+
