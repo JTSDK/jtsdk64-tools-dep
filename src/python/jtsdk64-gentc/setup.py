@@ -21,7 +21,7 @@ setuptools.setup(
         'Documentation': 'https://ki7mt.github.io/jtsdk-tools/',
     },
     packages=setuptools.find_packages(),
-    install_requires=['colorconsole'],
+    install_requires=['colorconsole', 'jt64common'],
     entry_points={
         'console_scripts': ['jt64gentc = jt64gentc.__main__:main'],
     },

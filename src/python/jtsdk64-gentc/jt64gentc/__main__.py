@@ -5,8 +5,8 @@ import argparse
 import contextlib
 
 from colorconsole import terminal
-from jt64gentc import __qt_version_list__ as qt_version_list
-from jt64gentc import __qt_version_dict__ as qt_version_dict
+from jt64common import __qt_version_list__ as qt_version_list
+from jt64common import __qt_version_dict__ as qt_version_dict
 from jt64gentc import __version__
 from jt64gentc import __name__
 from jt64gentc import __summary__
