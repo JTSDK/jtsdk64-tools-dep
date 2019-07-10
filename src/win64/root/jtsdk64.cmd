@@ -230,7 +230,7 @@ IF EXIST "%cd%\%username%-doskey.cmd" (
     call "%cd%\%username%-doskey.cmd"
 )
 DOSKEY msys2 = %JTSDK_HOME%\tools\msys64\msys2_shell.cmd
-DOSKEY setqt = %JTSDK_SCRIPTS%\setqtver.cmd
+DOSKEY setqt = python %JTSDK_SCRIPTS%\jt64setqt.py
 DOSKEY jtenv = jt64env $*
 DOSKEY jtgentc = jt64gentc $*
 DOSKEY jtversion = jt64version $*
