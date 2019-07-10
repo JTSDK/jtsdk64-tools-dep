@@ -42,38 +42,38 @@ GOTO HELP
 
 :_CLEAN
 CLS
-PUSHD %CD%\python\jtsdk64-common
+PUSHD %CD%\python\jt64common
 call .\make.cmd distclean
 POPD
 
-PUSHD %CD%\python\jtsdk64-gentc
+PUSHD %CD%\python\jt64gentc
 call .\make.cmd distclean
 POPD
 
-PUSHD %CD%\python\jtsdk64-environment
+PUSHD %CD%\python\jt64env
 call .\make.cmd distclean
 POPD
 
-PUSHD %CD%\python\jtsdk64-version
+PUSHD %CD%\python\jt64version
 call .\make.cmd distclean
 POPD
 GOTO EOF
 
 :_DIST
 CLS
-PUSHD %CD%\python\jtsdk64-common
+PUSHD %CD%\python\jt64common
 call .\make.cmd dist
 POPD
 
-PUSHD %CD%\python\jtsdk64-gentc
+PUSHD %CD%\python\jt64gentc
 call .\make.cmd dist
 POPD
 
-PUSHD %CD%\python\jtsdk64-environment
+PUSHD %CD%\python\jt64env
 call .\make.cmd dist
 POPD
 
-PUSHD %CD%\python\jtsdk64-version
+PUSHD %CD%\python\jt64version
 call .\make.cmd dist
 POPD
 GOTO EOF
@@ -85,19 +85,19 @@ ECHO  Publishing Python Apps
 ECHO ------------------------------
 ECHO.
 CLS
-PUSHD %CD%\python\jtsdk64-common
+PUSHD %CD%\python\jt64common
 call .\make.cmd publish
 POPD
 
-PUSHD %CD%\python\jtsdk64-gentc
+PUSHD %CD%\python\jt64gentc
 call .\make.cmd publish
 POPD
 
-PUSHD %CD%\python\jtsdk64-environment
+PUSHD %CD%\python\jt64env
 call .\make.cmd publish
 POPD
 
-PUSHD %CD%\python\jtsdk64-version
+PUSHD %CD%\python\jt64version
 call .\make.cmd publish
 POPD
 GOTO EOF
