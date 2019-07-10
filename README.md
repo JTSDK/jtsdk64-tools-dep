@@ -217,6 +217,25 @@ This will use the default QT version (**5.12.4**) to build the latest version of
 Hamlib from Bill's (G4WJS) Git repository. The output location and other
 associated build-details will be printed in the summary.
 
+## Script Updates
+
+The primary delivery system for script and other updates is to clone the repo
+and use the make file. The following are the steps do an initial checkout and
+upgrade.
+
+```shell
+  # Close all JTSDK64 Tools Consoles
+  # Open JTSDK64-Tools Setup
+  cd src
+  git clone https://github.com/KI7MT/jtsdk64-tools.git
+  cd .\jtsdk64-tools\src
+  make install
+
+  # Note: If you already have the source code checked out, substitute the
+  # the git clone statement with:
+  git pull
+```
+
 ## Conclusion
 
 At this point in the installation, the environment should be ready to build
