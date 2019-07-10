@@ -146,7 +146,6 @@ def main():
     print(f" QT {os.environ['QTV']} Tool Chain\n")
     print(f"   JT64 Version  : {__version__}")
     print(f"   Qt Version    : {qtver}")
-    print(f"   Qt Version    : {qtver}")
     print(f"   Qmake         : {get_qmake_version()}")
     print(f"   GCC           : {get_gcc_version()}")
     print(f"   Mingw32-Make  : {get_mingw32_make_version()}")
