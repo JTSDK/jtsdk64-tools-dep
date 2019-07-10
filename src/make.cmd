@@ -108,26 +108,7 @@ ECHO ------------------------------
 ECHO  Installing Python Apps
 ECHO ------------------------------
 ECHO.
-ECHO Installing JT64 Common
-ECHO ----------------------
-pip install ^-I^, ^-^-ignore^-installed ^-r %CD%\win64\cmd\requirements.txt
-
-REM ECHO.
-REM ECHO Installing JT64 Eenv
-REM ECHO ----------------------
-REM pip install jt64env -U
-
-REM ECHO.
-REM ECHO Installing JT64 Gentc
-REM ECHO ----------------------
-REM pip install jt64gentc -U
-
-REM ECHO.
-REM ECHO Installing JT64 Version
-REM ECHO -----------------------
-REM pip install jt64version -U
-REM ECHO.
-POPD
+pip install --upgrade -r %CD%\win64\cmd\requirements.txt
 
 :: Change Directories to src\win64
 PUSHD %CD%\win64
