@@ -108,6 +108,7 @@ ECHO ------------------------------
 ECHO  Installing Python Apps
 ECHO ------------------------------
 ECHO.
+ECHO "Getting package requirments, please wait..."
 pip install --upgrade -r %CD%\win64\cmd\requirements.txt
 
 :: Change Directories to src\win64
