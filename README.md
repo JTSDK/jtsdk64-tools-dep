@@ -82,10 +82,15 @@ installers available at [JTSDK SourceForge][]
 
 ### Postinstall
 
-When the update installer is finished, the **JTSDK-Setup** script will
-open automatically.
+When the update installer is finished, use the Windows Start Menu and launch
+**JTSDK64-Setup**
 
-#### Upgrade Current Installation
+```shell
+Start >> JTSDK64-Tools >> JTSDK64-Setup
+```
+
+
+### Upgrade Current Installation
 
 If you are upgrading from a previous installation, all that is required is to update the Python packages.
 
@@ -95,7 +100,7 @@ If you are upgrading from a previous installation, all that is required is to up
 pysetup install-deps
 ```
 
-#### New Installation
+### New Installation
 
 If this is a new installation, you need to run the post install script. At the `JTSDK64 Setup Prompt`, start the postinstall script with:
 
@@ -148,8 +153,8 @@ Python       : y
 Git-SCM      : y
 Full Qt      : f
 MSYS2 Setup  : y
-VS Code      : y
-Postgres     : y
+VS Code      : n
+Postgres     : n
 ```
 
 ## MSYS2 Update and Configuration
@@ -169,7 +174,7 @@ the your current user; create home directory, generate profiles etc. Once
 complete, you'll be presented with the main splash screen for
 `JTSDK64 Tools MSYS2`.
 
-#### MSYS2 Splash Screen
+### MSYS2 Splash Screen
 
 ```shell
 JTSDK64 Tools MSYS2 using QT v
@@ -185,7 +190,7 @@ for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
 menu
 ```
 
-#### JTSDK MSYS2 Menu Options
+### JTSDK MSYS2 Menu Options
 
 The following options are available on the `JTSDK64 Tools MSYS2 Menu`:
 
@@ -214,11 +219,11 @@ close the [MSYS2][] window.
 1. Select **option 6 again**
 1. Repeat **option 6** until there are no further updates.
 
-#### Install Hamlib Dependencies
+### Install Hamlib Dependencies
 
 1. Using the menu tools menu again, select **option 2** to install Hamlib packages
 
-#### Building Hamlib
+### Building Hamlib
 
 Now that the [MSYS2][] environment is updated, and all dependencies have been
 installed, its time to build hamlib.
@@ -228,25 +233,6 @@ installed, its time to build hamlib.
 This will use the default QT version (**5.12.4**) to build the latest version of
 Hamlib from Bill's (G4WJS) Git repository. The output location and other
 associated build-details will be printed in the summary.
-
-## Script Updates
-
-The primary delivery system for script and other updates is to clone the repo
-and use the make file. The following are the steps do an initial checkout and
-upgrade.
-
-```shell
-  # Close all JTSDK64 Tools Consoles
-  # Open JTSDK64-Tools Setup
-  cd src
-  git clone https://github.com/KI7MT/jtsdk64-tools.git
-  cd .\jtsdk64-tools\src
-  make install
-
-  # Note: If you already have the source code checked out, substitute the
-  # the git clone statement with:
-  git pull
-```
 
 ## Conclusion
 
