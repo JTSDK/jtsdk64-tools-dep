@@ -122,7 +122,7 @@ ECHO ------------------------------
 ECHO  Installing Scripts in JTPY
 ECHO ------------------------------
 ECHO.
-pip install --upgrade -r %CD%\python\requirements.txt
+pip install --upgrade -r %SETUP_DIR%\miniconda\requirements.txt
 GOTO INSTALL_SUMMARY
 
 :: INSTALL SUMMARY -------------------------------------------------------------
