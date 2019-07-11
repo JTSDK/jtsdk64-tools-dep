@@ -139,6 +139,7 @@ ECHO  Install Directory ..... %PYTHON_INSTALL_DIR%
 ECHO  Virtual Env Created ... jtpy
 ECHO  Installed Packages .... jt64common
 ECHO                          jt64env
+ECHO                          jt64setqt
 ECHO                          jt64version
 ECHO                          jt64gentc
 ECHO.
