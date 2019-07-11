@@ -35,5 +35,5 @@ setuptools.setup(
         "Programming Language :: Python :: 3.6",
         "Programming Language :: Python :: 3.7",
         ],
-    url='https://github.com/KI7MT/jtsdk64-tools/tree/master/src/python/jtsdk64-common',
+    url='https://github.com/KI7MT/jtsdk64-tools/tree/master/src/python/jt64common',
 )
