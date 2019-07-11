@@ -120,7 +120,10 @@ def get_gcc_version():
 
 def list_tcfiles():
     file_path = os.path.join(os.environ["JTSDK_HOME"], "tools", "tcfiles")
-    files = os.listdir(file_path)
+    if len(os.listdir(file_path)) == 0:
+        files = 'Directory is Empty'
+    else:
+        files = os.listdir(file_path)
     return files
 
 
