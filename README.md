@@ -74,13 +74,17 @@ installers available at [JTSDK SourceForge][]
 
 ## Download and Run Installers
 
+Download both the Tools and Apps installers
+
 - Download [JTSDK64-Tools-3.1.0][]
 - Download [JTSDK64-Apps-3.1.0.1][]
 
-1. Run the [JTSDK64-Tools-3.1.0][] first
-1. Run the [JTSDK64-Apps-3.1.0.1][] second
+Run The Tools first, them
 
-### Postinstall
+1. Run the jtsdk64-tools-3.1.0.exe
+2. Run the jtsdk64-apps-3.1.0.1.exe
+
+## Postinstall
 
 When the update installer is finished, use the Windows Start Menu and launch
 **JTSDK64-Setup**
@@ -89,10 +93,10 @@ When the update installer is finished, use the Windows Start Menu and launch
 Start >> JTSDK64-Tools >> JTSDK64-Setup
 ```
 
+## Upgrade Current Installation
 
-### Upgrade Current Installation
-
-If you are upgrading from a previous installation, all that is required is to update the Python packages.
+If you are upgrading from a previous installation, all that is required is to
+update the Python packages.
 
 ```shell
 # At the command prompt, type:
@@ -100,9 +104,10 @@ If you are upgrading from a previous installation, all that is required is to up
 pysetup install-deps
 ```
 
-### New Installation
+## New Installation
 
-If this is a new installation, you need to run the post install script. At the `JTSDK64 Setup Prompt`, start the postinstall script with:
+If this is a new installation, you need to run the post install script. At
+the `JTSDK64 Setup Prompt`, start the postinstall script with:
 
 ```shell
 type: postinstall
@@ -114,19 +119,16 @@ You will be asked which applications you'd like to install by answering
 
 For first time installations. select all the available options including MSYS2.
 
-#### Required Installs
+## Required Installs
 
-For building WSJT-X and Hamlib, the following are required installs
+For building WSJT-X and Hamlib, the following are required install / configuration items:
 
-1. Python
-1. Git-SCM
-1. QT
-2. MSYS2 Setup
+- **Python**, for managing the environmet
+- **Git-SCM**, source code management
+- **QT**, libraries and compilers
+- **MSYS2** for building Hamlib
 
-
-#### Options
-
-
+## Option Selections
 
 Regarding Qt, if you have any plans on testing / using multiple versions of Qt, you should select the `F` option for a full installation.
 
@@ -145,16 +147,17 @@ Regarding Qt, if you have any plans on testing / using multiple versions of Qt, 
    F = Full ( full set of tools )
    N = Skip Installation
 
-  NOTE: VS Code and PostgreSQL are NOT required
-  for building WSJT-X, all others are.
+ NOTE: VS Code and PostgreSQL are NOT required
+ for building WSJT-X, all others are.
 
 Input Your Install Selections
-Python       : y
-Git-SCM      : y
-Full Qt      : f
-MSYS2 Setup  : y
-VS Code      : n
-Postgres     : n
+(required) Python       : y
+(required) Python       : y
+(required) Git-SCM      : y
+(required) Full Qt      : f
+(required) MSYS2 Setup  : y
+(optional) VS Code      : n
+(optional) Postgres     : n
 ```
 
 ## MSYS2 Update and Configuration
@@ -180,7 +183,7 @@ complete, you'll be presented with the main splash screen for
 JTSDK64 Tools MSYS2 using QT v
 
 For main menu, type ..: menu
-For Help Menu, type ..: jt64help
+For Help Menu, type ..: jthelp
 
 Copyright (C) 2013-2019, GPLv3, Greg Beam, KI7MT
 This is free software; There is NO warranty; not even
