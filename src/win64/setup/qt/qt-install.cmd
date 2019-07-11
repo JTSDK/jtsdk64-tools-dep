@@ -49,7 +49,7 @@ ECHO  that, NO other user action is required.
 ECHO.
 pause
 ECHO.
-ECHO Sarting Qt Installation. Cick "NEXT" on the Welcome screen,
+ECHO Starting Qt Installation. Cick "NEXT" on the Welcome screen,
 ECHO then the installer script will do the rest.
 ECHO.
 CD %SETUP_DIR%\qt

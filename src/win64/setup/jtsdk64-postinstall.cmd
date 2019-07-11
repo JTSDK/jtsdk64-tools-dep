@@ -2,7 +2,7 @@
 ::-----------------------------------------------------------------------------::
 :: Name .........: jtsdk64-postinstall.cmd
 :: Project ......: Part of the JTSDK64 Tools Project
-:: Description ..: Installs Additional Componsnts based on User selections
+:: Description ..: Installs Componsnts based on User selections
 :: Project URL ..: https://github.com/KI7MT/jtsdk64-tools.git
 :: Usage ........: Call this from jtsdk64-tools-setup => jtsdk64-postinstall $*
 ::
@@ -26,16 +26,20 @@ ECHO  For the Qt Install Selection:
 ECHO    D = Default ( minimal set of tools )
 ECHO    F = Full ( full set of tools )
 ECHO    N = Skip Installation
+ECHO.
+ECHO  NOTE: VS Code and PostgreSQL are NOT required
+ECHO  for building WSJT-X, all others are.
 
 :_GETSELECTIONS
 ECHO.
 ECHO Input Your Install Selections
-set /p UserInputPython="Python       : "
-set /p UserInputGit="Git-SCM      : "
-set /p UserInputVSCode="VS Code      : "
-set /p UserInputPgsql="Postgres     : "
-set /p UserInputQt="Full Qt      : "
-set /p UserInputMsys2="MSYS2 Setup  : "
+set /p UserInputPython="(required) Python       : "
+set /p UserInputGit="(required) Git-SCM      : "
+set /p UserInputQt="(required) Full Qt      : "
+set /p UserInputMsys2="(required) MSYS2 Setup  : "
+set /p UserInputVSCode="(optional) VS Code      : "
+set /p UserInputPgsql="(optional) Postgres     : "
+
 GOTO _PRINTANSWERS
 
 :_PRINTANSWERS

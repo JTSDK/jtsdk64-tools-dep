@@ -230,11 +230,11 @@ IF EXIST "%cd%\%username%-doskey.cmd" (
     call "%cd%\%username%-doskey.cmd"
 )
 DOSKEY msys2 = %JTSDK_HOME%\tools\msys64\msys2_shell.cmd
-DOSKEY setqt = python %JTSDK_SCRIPTS%\jt64setqt.py
 DOSKEY jtenv = jt64env $*
 DOSKEY jtgentc = jt64gentc $*
-DOSKEY jtversion = jt64version $*
 DOSKEY jthelp = python -c "from jt64common.help import jt64_main_help; jt64_main_help()"
+DOSKEY jtsetqt = python %JTSDK_SCRIPTS%\jt64setqt.py
+DOSKEY jtversion = jt64version $*
 DOSKEY home = CD %JTSDK_HOME% $T call python -c "from jt64common.messages import main_header_message; main_header_message()"
 DOSKEY srcd = CD %JTSDK_HOME%/src
 DOSKEY clear=cls
@@ -244,7 +244,7 @@ DOSKEY lsb=dir /b
 ::------------------------------------------------------------------------------
 :: Generate Qt Tool Chain Files
 ::------------------------------------------------------------------------------
-ECHO * Generating Qt Tool CHain Files
+ECHO * Generating Qt Tool Chain Files
 call python -c "import jt64gentc; jt64gentc"
 
 ::------------------------------------------------------------------------------

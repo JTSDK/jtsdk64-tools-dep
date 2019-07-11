@@ -22,10 +22,12 @@ configd = os.path.join(home, 'config')
 screen = terminal.get_terminal(conEmu=False)
 current_version = os.environ['QTV']
 
+
 def valid_versions():
     print("\nValid Qt Versions")
     for i in available:
         print(f"  {i}")
+
 
 def update_version(user_entry):
     """Remove all previously set versions, then set the users selections."""
@@ -46,11 +48,11 @@ def update_version(user_entry):
 
     change_message()
 
+
 def change_message():
     """Print message alterting the user to a required restart"""
     print("\nImportant: Changing QT Versions requires restarting")
     print("the main JTSDK64 Tools Environment.\n")
-
 
 
 def main():

@@ -69,39 +69,35 @@ Before stating the installation:
 
 ## Installation and Configuration
 
-All you need to get started is contained within in a single [InnoSetup][]
-installer available at [JTSDK SourceForge][].
+All you need to get started is contained within then [InnoSetup][]
+installers available at [JTSDK SourceForge][]
 
-### Download Installer
+## Download and Run Installers
 
 - Download [JTSDK64-Tools-3.1.0][]
+- Download [JTSDK64-Apps-3.1.0.1][]
 
-Once downloaded, run the installer and follow the prompts. The install location
-is fixed to a specific folder, however, you may select whatever drive suites
-your system needs. For this example, I will be using the `C:` drive throughout
-this document. You could just as easily use `D:`, `E:` or any other non-volatile
-hard disk on your system.
+1. Run the [JTSDK64-Tools-3.1.0][] first
+1. Run the [JTSDK64-Apps-3.1.0.1][] second
 
 ### Postinstall
 
-When the installer is finished, the `JTSDK64 Setup Script` will open automatically
-and you will see a list of `Installed` components. You may have one or more of
-the components such as [Git][] or [VS Code][] installed already. You can find
-the setup script either in the Windows Program Start Menu, or in the root
-of the install directory itself: `(C|D|E):\JTSDK64-Tools`, etc.
+When the update installer is finished, the **JTSDK-Setup** script will
+open automatically.
+
+#### Upgrade Current Installation
+
+If you are upgrading from a previous installation, all that is required is to update the Python packages.
 
 ```shell
-# Start Menu
-JTSDK64-Tools >> JTSDK64 Setup
+# At the command prompt, type:
 
-# For C: Drive
-C:\JTSDK64-Tools\jtsdk64-setup.cmd
-
-# For D: Drive
-D:\JTSDK64-Tools\jtsdk64-setup.cmd
+pysetup install-deps
 ```
 
-At the `JTSDK64 Setup Prompt`, start the postinstall script with:
+#### New Installation
+
+If this is a new installation, you need to run the post install script. At the `JTSDK64 Setup Prompt`, start the postinstall script with:
 
 ```shell
 type: postinstall
@@ -112,11 +108,24 @@ You will be asked which applications you'd like to install by answering
 `M = Minimal, F = Full, or S = Skip`.
 
 For first time installations. select all the available options including MSYS2.
-Regarding Qt, if you have any plans on testing / using multiple versions of Qt,
-you should select the `F` option for a full installation.
 
->NOTE: Depending on your computer and internet speeds, this could take upwards
-of an hour or more to complete; the majority of time taken by the Qt section.
+#### Required Installs
+
+For building WSJT-X and Hamlib, the following are required installs
+
+1. Python
+1. Git-SCM
+1. QT
+2. MSYS2 Setup
+
+
+#### Options
+
+
+
+Regarding Qt, if you have any plans on testing / using multiple versions of Qt, you should select the `F` option for a full installation.
+
+>NOTE: Depending on your computer and internet speeds, this could take upwards of an hour or more to complete; the majority of time taken by the Qt section.
 
 ```shell
  ---------------------------------------------------
@@ -131,13 +140,16 @@ of an hour or more to complete; the majority of time taken by the Qt section.
    F = Full ( full set of tools )
    N = Skip Installation
 
+  NOTE: VS Code and PostgreSQL are NOT required
+  for building WSJT-X, all others are.
+
 Input Your Install Selections
 Python       : y
 Git-SCM      : y
-VS Code      : y
-Postgres     : y
 Full Qt      : f
 MSYS2 Setup  : y
+VS Code      : y
+Postgres     : y
 ```
 
 ## MSYS2 Update and Configuration
@@ -278,6 +290,7 @@ and implement the final disposition.
 [Hamlib]: https://hamlib.github.io/
 [JTSDK Sourceforge]: https://sourceforge.net/projects/jtsdk/files/win64/3.1.0/
 [JTSDK64-Tools-3.1.0]: https://sourceforge.net/projects/jtsdk/files/win64/3.1.0/jtsdk64-tools-3.1.0.exe
+[JTSDK64-Apps-3.1.0.1]: https://sourceforge.net/projects/jtsdk/files/win64/3.1.0/jtsdk64-apps-3.1.0.1.exe
 [Git]: https://git-scm.com/
 [VS Code]: https://code.visualstudio.com/Download
 [Issue Tracker]: https://github.com/KI7MT/jtsdk64-tools/issues
