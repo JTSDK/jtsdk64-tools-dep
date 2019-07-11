@@ -122,25 +122,7 @@ ECHO ------------------------------
 ECHO  Installing Scripts in JTPY
 ECHO ------------------------------
 ECHO.
-ECHO Python Dependencies
-ECHO ---------------------------------------
-python -m pip install colorconsole -U
-ECHO.
-ECHO JT64 Common
-ECHO ---------------------------------------
-python -m pip install jt64common -U
-ECHO.
-ECHO JT64 Env
-ECHO ---------------------------------------
-python -m pip install jt64env -U
-ECHO.
-ECHO JT64 Version
-ECHO ---------------------------------------
-python -m pip install jt64version -U
-ECHO.
-ECHO JT64 Gentc
-ECHO ---------------------------------------
-python -m pip install jt64gentc -U
+pip install --upgrade -r %CD%\python\requirements.txt
 GOTO INSTALL_SUMMARY
 
 :: INSTALL SUMMARY -------------------------------------------------------------
