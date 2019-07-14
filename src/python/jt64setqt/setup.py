@@ -27,9 +27,9 @@ setuptools.setup(
     },
     classifiers=[
         "Natural Language :: English",
-        "Development Status :: 4 - Beta",
+        "Development Status :: 5 - Production/Stable",
         "Intended Audience :: Developers",
-        "Topic :: Utilities",
+        "Topic :: Communications :: Ham Radio",
         "License :: OSI Approved :: GNU General Public License v3 (GPLv3)",
         "Operating System :: Microsoft :: Windows",
         "Programming Language :: Python",
