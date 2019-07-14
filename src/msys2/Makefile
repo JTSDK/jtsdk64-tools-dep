@@ -3,7 +3,7 @@
 # Prerequsists : MSYS2 Shell Initialization
 
 PROGRAM	:=	JTSDK64 MSYS2 Scripts
-VERSION	:=	3.1.0
+VERSION	:=	3.1.0.2
 AUTHOR	:=	Greg Beam, KI7MT
 LICENSE	:=	GPLv3
 BUGS	:=	https://github.com/KI7MT/jtsdk64-tools/issues
