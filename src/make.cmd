@@ -54,6 +54,14 @@ PUSHD %CD%\python\jt64env
 call .\make.cmd distclean
 POPD
 
+PUSHD %CD%\python\jt64setqt
+call .\make.cmd distclean
+POPD
+
+PUSHD %CD%\python\jt64config
+call .\make.cmd distclean
+POPD
+
 PUSHD %CD%\python\jt64version
 call .\make.cmd distclean
 POPD
@@ -70,6 +78,14 @@ call .\make.cmd dist
 POPD
 
 PUSHD %CD%\python\jt64env
+call .\make.cmd dist
+POPD
+
+PUSHD %CD%\python\jt64setqt
+call .\make.cmd dist
+POPD
+
+PUSHD %CD%\python\jt64config
 call .\make.cmd dist
 POPD
 
@@ -94,6 +110,14 @@ call .\make.cmd publish
 POPD
 
 PUSHD %CD%\python\jt64env
+call .\make.cmd publish
+POPD
+
+PUSHD %CD%\python\jt64setqt
+call .\make.cmd publish
+POPD
+
+PUSHD %CD%\python\jt64config
 call .\make.cmd publish
 POPD
 
