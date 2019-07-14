@@ -18,7 +18,7 @@ setuptools.setup(
 
     python_requires='>=3.5.*',
     project_urls={
-        'Documentation': 'https://ki7mt.github.io/jtsdk-tools/',
+        'Documentation': 'https://ki7mt.github.io/jtsdk64-tools/',
     },
     packages=setuptools.find_packages(),
     py_modules=['help', 'messages', 'utils'],
