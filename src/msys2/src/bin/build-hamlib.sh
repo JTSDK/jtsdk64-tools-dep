@@ -38,16 +38,7 @@ BUILDD="$SRCD/build"
 PREFIX="/$DRIVE/JTSDK64-Tools/tools/hamlib/qt/$QTV"
 LIBUSBINC="/$DRIVE/JTSDK64-Tools/tools/libusb/1.0.22/include"
 LIBUSBD="/$DRIVE/JTSDK64-Tools/tools/libusb/1.0.22/MinGW64/dll"
-JT64CONFIGDIR="/$DRIVE/JTSDK64-Tools/config"
 mkdir -p $HOME/src/hamlib/{build,src} >/dev/null 2>&1
-
-# Added on v3.1.0.2 Upgrade with JT64Config Options
-if [[ -f $JT64CONFIGDIR/hlclean ]]
-then
-	export JTSDK_HLCLEAN="True"
-else
-	unset JTSDK_HLCLEAN
-fi
 
 # QT Tool Chain Paths
 QTV="$QTV"
@@ -238,9 +229,10 @@ echo -e ${C_Y} " RUNNING MAKE CLEAN [ $PKG_NAME ]"${C_NC}
 echo '---------------------------------------------------------------'
 echo ''
 # Updated in v3.1.0.2 Release
-if [[ -z $JTSDK_HLCLEAN -a $JTSDK_HLCLEAN = 'True' ]]
+# Updated in v3.1.0.2 Release
+if [ -f "/$DRIVE/JTSDK64-Tools/config/hlclean" ]
 then
-    make clean
+	make clean
 fi
 
 # run make
