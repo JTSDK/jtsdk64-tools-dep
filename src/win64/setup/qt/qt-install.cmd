@@ -34,6 +34,7 @@ GOTO INSTALL_QT
 
 :: INSTALL Qt ------------------------------------------------------------------
 :INSTALL_QT
+IF EXIST "%SETUP_DIR%\Qt\MaintenanceTool.exe" ( GOTO _PREVIOUS_INSTALL)
 ECHO.
 ECHO ------------------------------------------------------------
 ECHO Installing Qt Using Generated QS Scripts
@@ -166,6 +167,21 @@ ECHO    To uninstall Qt, launch the Maintenance Tool and select
 ECHO    uninstall when asked.
 ECHO.
 ECHO    Location : %TOOLS_DIR%\Qt\MaintenanceTool.exe
+ECHO.
+GOTO EOF
+
+:_PREVIOUS_INSTALL
+CLS
+ECHO -------------------------------------------------------
+ECHO  JTSDK64 Qt Setup Previous Install Found
+ECHO -------------------------------------------------------
+ECHO.
+ECHO  The install script found MaintenanceTool.exe in the
+ECHO  target install directory. This prevents the use of
+ECHO  generate QS scripts to perform an installaiton.
+ECHO.
+ECHO  To add additional compontes, type ....^: qtsetup manage
+ECHO  To update existing components, type ..^: qtsetup update
 ECHO.
 GOTO EOF
 
