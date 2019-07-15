@@ -3,7 +3,7 @@
 | Application Data ||
 | ---| --- |
 | Package             | `jt64gentc`
-| Version             | 0.0.22
+| Version             | 0.0.23
 | Topic               | Communications, Ham Radio
 | Development Status  | 5 - Production/Stable
 | Distributions       | Windows, Linux
