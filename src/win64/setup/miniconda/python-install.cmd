@@ -138,10 +138,11 @@ ECHO.
 ECHO  Install Directory ..... %PYTHON_INSTALL_DIR%
 ECHO  Virtual Env Created ... jtpy
 ECHO  Installed Packages .... jt64common
+ECHO                          jt64config
 ECHO                          jt64env
+ECHO                          jt64gentc
 ECHO                          jt64setqt
 ECHO                          jt64version
-ECHO                          jt64gentc
 ECHO.
 ECHO  To ensure the install worked properly, exit the setup
 ECHO  environment, then re^-launch jtsdk64-tools-setup.
