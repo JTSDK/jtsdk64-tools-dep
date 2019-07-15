@@ -44,19 +44,17 @@ def supported_versions():
     """Print list of supported QT Frameworks from qt_version_dict"""
     clear()
     screen = terminal.get_terminal(conEmu=False)
-    print("---------------------------------------------")
     screen.set_color(3, 0)
-    print(f"Supported QT Frameworks")
+    print(f"Supported QT Frameworks\n")
     screen.reset_colors()
-    print("---------------------------------------------\n")
+    print(f"{'Version':<12} {'GCC':<10} {'Available':<10} {'Installed'}")
+    print("-" * 50)
     for k, v in qt_version_dict.items():
         path = os.path.join(qthome, k)
         if os.path.isdir(path):
-            status = "Is Available and Installed"
+            print(f"{k:<8} {v:<17} {'Yes':<10} {'Yes'}")
         else:
-            status = "Is Available But Not Installed"
-        print(f" Version {k} using {v} {status}")
-
+            print(f"{k:<8} {v:<17} {'Yes':<10} {'No'}")
 
 def main():
     """Generates Tool Chain files for each QT version in qt_version_list"""
