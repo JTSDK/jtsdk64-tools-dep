@@ -1,4 +1,4 @@
-version_info = (0, 0, 24)
+version_info = (0, 0, 25)
 __title__ = "jt64gentc"
 __version__ = '.'.join(str(c) for c in version_info)
 __name__ = "jt64gentc"

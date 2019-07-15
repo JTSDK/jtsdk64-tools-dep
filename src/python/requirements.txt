@@ -4,6 +4,6 @@ wincertstore
 jt64common==0.0.24
 jt64config==0.0.22
 jt64env==0.0.22
-jt64gentc==0.0.24
+jt64gentc==0.0.25
 jt64setqt==0.0.22
 jt64version==0.0.22

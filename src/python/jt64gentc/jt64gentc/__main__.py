@@ -45,7 +45,7 @@ def supported_versions():
     clear()
     screen = terminal.get_terminal(conEmu=False)
     screen.set_color(3, 0)
-    print(f"Supported QT Frameworks\n")
+    print(f"\nSupported QT Frameworks\n")
     screen.reset_colors()
     print(f"{'Version':<12} {'GCC':<10} {'Available':<10} {'Installed'}")
     print("-" * 50)
