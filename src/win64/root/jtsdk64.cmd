@@ -231,7 +231,7 @@ IF EXIST "%cd%\%username%-doskey.cmd" (
 )
 :: Python Packages
 DOSKEY jtenv = jt64env $*
-DOSKEY jtsetqt = jt64config $*
+DOSKEY jtconfig = jt64config $*
 DOSKEY jtgentc = jt64gentc $*
 DOSKEY jtsetqt = jt64setqt $*
 DOSKEY jtversion = jt64version $*
