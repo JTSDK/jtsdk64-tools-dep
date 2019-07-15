@@ -19,7 +19,7 @@ IF /I [%1]==[-d] (
 )
 
 :APP_INFO
-SET JTSDK64_VERSION=3.1.0
+SET /P JTSDK64_VERSION=<ver.jtsdk
 @chcp 65001 >NUL 2>&1
 @SET LANG=en_US
 
