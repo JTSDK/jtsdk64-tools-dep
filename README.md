@@ -99,7 +99,7 @@ make install
 The Make Install command will copy all the scripts, and install the
 required Python Packages using the requirements.txt file.
 
-After updating the **JTSDK64** enviromnet scripts, update MSYS2 Scripts
+After updating the **JTSDK64** environment scripts, update MSYS2 Scripts
 
 ```shell
 # From JTSDK64-Tools, open MSYS2 console
@@ -131,7 +131,7 @@ For first time installations. select all (required) options including MSYS2.
 
 For building WSJT-X and Hamlib, the following are required install / configuration items:
 
-- **Python**, for managing the environmet
+- **Python**, for managing the environment
 - **Git-SCM**, source code management
 - **QT**, libraries and compilers
 - **MSYS2** for building Hamlib
