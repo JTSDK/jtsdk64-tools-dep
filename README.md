@@ -64,7 +64,11 @@ Skip the Upgrade Section and proceed to [New Installation](#new-installation)
 ## Upgrade Current Installation
 
 If you are upgrading from a previous installation, all that is required is to
-upgrade the Python Packages.
+run the apps install and upgrade Python Packages.
+
+1. Run the Apps Installer: [JTSDK64-Apps-3.1.0.2][]
+
+Then from **JTSDK64-Setup**, update Python Packages
 
 ```shell
 # At the command prompt, type:
@@ -72,7 +76,7 @@ upgrade the Python Packages.
 pysetup install-deps
 ```
 
-You can also upgrade from the soure package itself
+You can also upgrade from the source package itself
 
 ```shell
 # While still in JTSDK64-Setup
