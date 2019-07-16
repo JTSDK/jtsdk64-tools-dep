@@ -34,7 +34,7 @@ GOTO INSTALL_QT
 
 :: INSTALL Qt ------------------------------------------------------------------
 :INSTALL_QT
-IF EXIST "%SETUP_DIR%\Qt\MaintenanceTool.exe" ( GOTO _PREVIOUS_INSTALL)
+IF EXIST %TOOLS_DIR%\Qt\MaintenanceTool.exe ( GOTO _PREVIOUS_INSTALL )
 ECHO.
 ECHO ------------------------------------------------------------
 ECHO Installing Qt Using Generated QS Scripts
