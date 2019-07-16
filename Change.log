@@ -1,0 +1,29 @@
+# JTSDK64 Tools Change Log
+
+Changes made after initial publiscation of the tool chain
+
+## Version v3.1.0.2
+
+Several critical enhancements, documents, and bug fixes are included in
+this release.
+
+### Enhancement
+- Added Python package **jtconfig**
+- Added Python package **jtsetqt**
+
+### Bug fixes
+- **jtgentc** should only generate TC files if the Qt version is installed
+- Add **jtconfig** to **jthelp** listing in **jtcommon**
+- Running qtsetup (full or min) after running it previously should not be allowed
+- Typo in the MSYS2 update script function, **jjtupdate** should be **jtupdate**
+- **jtenv** is reporting JTSDK Version as None on its summary
+- Miniconda install summary missing jtsetqt package
+- **jtversion** crashed if toolchain files have not been generated
+
+## Documentatoin
+- Updated main README for installation and upgrade
+- Updated MSYS2 documentaiton
+- Minor Update to win64 README
+
+## Version 3.1.0.1
+- Initial Release
