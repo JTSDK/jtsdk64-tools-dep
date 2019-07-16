@@ -19,6 +19,7 @@ this release.
 - **jtenv** is reporting JTSDK Version as None on its summary
 - Miniconda install summary missing jtsetqt package
 - **jtversion** crashed if toolchain files have not been generated
+- Updated help screens
 
 ## Documentatoin
 - Updated main README for installation and upgrade
