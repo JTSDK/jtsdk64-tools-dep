@@ -1,88 +1,54 @@
 # JTSDK64 Tools
 
+## Version 3.1.0.2
+
 **JTSDK64 Tools** is a collection of 64-Bit [Open Source][] frameworks,
 library's and associated utilities focused on compiling [WSJT-X][], [WSJT][],
 [MAP65][], and [WSPR][] applications which are designed for weak-signal digital
 communication used by amateur radio operators world wide.
 
-In addition to the required [WSJT] build dependencies, a number of optional
-tools are available: [MSYS2][], [PostgreSQL][], [Dotnet Core SDK][],
-[Java Open JDK][], [Ant][], [Maven][], [Gradle][], and more.
-
 The primary focus of this document is to install the **JTSDK64 Core Tools**, or
 the minimal requirements for compiling the [WSJT][] suite of applications
-including [Hamlib][].
+including [Hamlib][]. Anything else should be considered optional, and posted
+in supplemental documentation.
 
 ## Preparation
 
-Before installing `JTSDK64-Tools`, you should remove all previous version of
+Before installing `JTSDK64-Tools`, you should remove all previous versions of
 `JTSDK`, particularly those elements that were installed to system folders
 such as:
 
 - Git
 - VS Code
 - PostgreSQL
-- Python, all Anaconda and Miniconda versions.
-- Java
+- Python, Anaconda or Miniconda
+- Java, Maven, Gradle, Ant
 
-If you chose to leave them installed (**not recommended**), you will need to edit
-the `Global Variables and Environment` section of the `jtsdk64-setup.cmd` script
-and point the relevant paths to your current install configuration.
-
-It should be noted, while removing [Git][] and [VS Code][] you will `not` loose
+>IMPORTANT: When removing [Git][] or [VS Code][], you will `not` loose
 any of your custom settings. Such items are kept outside the installation tree
-and will be picked back up at the next install.
-
-```shell
-::---------------------------------------------------------------------------
-:: GLOBAL ENVIRONMENT VARIABLES and PATHS
-::---------------------------------------------------------------------------
-
-:: Paths
-SET JTSDK_HOME=%CD%
-SET TOOLS_DIR=%JTSDK_HOME%\tools
-SET SETUP_DIR=%JTSDK_HOME%\tools\setup
-SET CURL_DIR=%SETUP_DIR%\curl\bin
-
-:: Global Environment Variables Variables
-SET GIT_INSTALL_DIR=%PROGRAMFILES%\Git
-SET DOTNET_INSTALL_DIR=%PROGRAMFILES%\dotnet
-SET PYTHON_INSTALL_DIR=%LOCALAPPDATA%\Miniconda3
-
-SET PGSQL_INSTALL_DIR=%PROGRAMFILES%\PostgreSQL\11
-SET PGSQL_DATA_DIR=%LOCALAPPDATA%\PostgreSQL\11\data
-
-SET QT_INSTALL_DIR=%TOOLS_DIR%\Qt
-SET JAVA_INSTALL_DIR=%PROGRAMFILES%\java
-```
-
->NOTE: For JAVA_HOME, either at the system level or script, this will need
-to be adjusted at some point. Currently, Java and associated apps like Ant,
-Maven and Gradle are "NOT" part of the Core Tools. No Immediate action is
-required for Java at this time.
+and will be picked back up at the next install. Likewise, with PostgreSQL,
+the uninstaller *does not* remove your databases. Python and Java Apps are
+simple re-installaiton.
 
 Before stating the installation:
 
 - Be sure all applications are closed
 - Perform a system re-boot
-- After which, run the main `jtsdk64-tools-3.1.0.exe` installer.
 
-## Installation and Configuration
+## Download, Installation and Configuration
 
-All you need to get started is contained within then [InnoSetup][]
+All you need to get started is contained within the [InnoSetup][]
 installers available at [JTSDK SourceForge][]
-
-## Download and Run Installers
 
 Download both the Tools and Apps installers
 
 - Download [JTSDK64-Tools-3.1.0][]
-- Download [JTSDK64-Apps-3.1.0.1][]
+- Download [JTSDK64-Apps-3.1.0.2][]
 
-Run The Tools first, them
+Run Each Installer In Order
 
 1. Run the jtsdk64-tools-3.1.0.exe
-2. Run the jtsdk64-apps-3.1.0.1.exe
+2. Run the jtsdk64-apps-3.1.0.2.exe
 
 ## Postinstall
 
@@ -93,10 +59,12 @@ When the update installer is finished, use the Windows Start Menu and launch
 Start >> JTSDK64-Tools >> JTSDK64-Setup
 ```
 
+Skip the Upgrade Section and proceed to [New Installation](#new-installation)
+
 ## Upgrade Current Installation
 
 If you are upgrading from a previous installation, all that is required is to
-update the Python packages.
+upgrade the Python Packages.
 
 ```shell
 # At the command prompt, type:
@@ -104,10 +72,46 @@ update the Python packages.
 pysetup install-deps
 ```
 
+You can also upgrade from the soure package itself
+
+```shell
+# While still in JTSDK64-Setup
+Type: home
+
+# If you have checked out jtsdk64-tools previously
+cd src\jtsdk64-tools\src
+git pull
+git checkout master
+make install
+
+# If you have not checked out jtsdk64-tools before
+cd src
+git clone https://github.com/KI7MT/jtsdk64-tools.git
+cd jtsdk64-tools\src
+git checkout master
+make install
+```
+
+The Make Install command will copy all the scripts, and install the
+required Python Packages using the requirements.txt file.
+
+After updating the **JTSDK64** enviromnet scripts, update MSYS2 Scripts
+
+```shell
+# From JTSDK64-Tools, open MSYS2 console
+Type: msys2
+
+# At the MSYS2 console prompt, type
+jtupdate
+```
+
+That concludes upgrading both the **JTSDK64** Environment, and MSYS2
+scripts.
+
 ## New Installation
 
-If this is a new installation, you need to run the post install script. At
-the `JTSDK64 Setup Prompt`, start the postinstall script with:
+If this is a new installation, you need to run the post install script first.
+At the `JTSDK64 Setup Prompt`, start the postinstall script with:
 
 ```shell
 type: postinstall
@@ -115,9 +119,9 @@ type: postinstall
 
 You will be asked which applications you'd like to install by answering
 ` Y = Yes or N = No`. For Qt there are three possible answers,
-`M = Minimal, F = Full, or S = Skip`.
+`D = Default, F or Y = Full, or N = Skip`.
 
-For first time installations. select all the available options including MSYS2.
+For first time installations. select all (required) options including MSYS2.
 
 ## Required Installs
 
@@ -130,9 +134,11 @@ For building WSJT-X and Hamlib, the following are required install / configurati
 
 ## Option Selections
 
-Regarding Qt, if you have any plans on testing / using multiple versions of Qt, you should select the `F` option for a full installation.
+Regarding Qt, if you have any plans on testing / using multiple versions of Qt,
+you should select the `F` option for a full installation.
 
->NOTE: Depending on your computer and internet speeds, this could take upwards of an hour or more to complete; the majority of time taken by the Qt section.
+>NOTE: Depending on your computer and internet speeds, this could take upwards
+of an hour or more to complete; the majority of time taken by the Qt section.
 
 ```shell
  ---------------------------------------------------
@@ -143,18 +149,17 @@ Regarding Qt, if you have any plans on testing / using multiple versions of Qt, 
  you want to install, use ( Y = Yes or N = No )
 
  For the Qt Install Selection:
-   D = Default ( minimal set of tools )
-   F = Full ( full set of tools )
-   N = Skip Installation
+   D      = Default ( minimal set of tools )
+   F or Y = Full ( full set of tools )
+   N      = Skip Installation
 
  NOTE: VS Code and PostgreSQL are NOT required
  for building WSJT-X, all others are.
 
 Input Your Install Selections
 (required) Python       : y
-(required) Python       : y
 (required) Git-SCM      : y
-(required) Full Qt      : f
+(required) Full Qt      : Y
 (required) MSYS2 Setup  : y
 (optional) VS Code      : n
 (optional) Postgres     : n
@@ -162,10 +167,10 @@ Input Your Install Selections
 
 ## MSYS2 Update and Configuration
 
-As with `JTSDK versoin 2`, the MSYS2 installation will need to be updated
-*before* installing hamlib dependencies. You can do this manually with a shortcut
-or through the menu system, the choice is yours. For consistency, this document
-will be using the menu system.
+As with `Previous JTSDK Installaitons`, the MSYS2 installation will need to be
+updated *before* installing hamlib dependencies. You can do this manually with
+a shortcut or through the menu system, the choice is yours. For consistency,
+this document will be using the menu system.
 
 You can read more about the [MSYS2][] setup process from their
 [website](https://www.msys2.org).
@@ -279,7 +284,7 @@ and implement the final disposition.
 [Hamlib]: https://hamlib.github.io/
 [JTSDK Sourceforge]: https://sourceforge.net/projects/jtsdk/files/win64/3.1.0/
 [JTSDK64-Tools-3.1.0]: https://sourceforge.net/projects/jtsdk/files/win64/3.1.0/jtsdk64-tools-3.1.0.exe
-[JTSDK64-Apps-3.1.0.1]: https://sourceforge.net/projects/jtsdk/files/win64/3.1.0/jtsdk64-apps-3.1.0.1.exe
+[JTSDK64-Apps-3.1.0.2]: https://sourceforge.net/projects/jtsdk/files/win64/3.1.0/jtsdk64-apps-3.1.0.1.exe
 [Git]: https://git-scm.com/
 [VS Code]: https://code.visualstudio.com/Download
 [Issue Tracker]: https://github.com/KI7MT/jtsdk64-tools/issues
