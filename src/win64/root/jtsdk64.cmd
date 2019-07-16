@@ -19,7 +19,7 @@ IF /I [%1]==[-d] (
 )
 
 :APP_INFO
-SET JTSDK64_VERSION=3.1.0
+SET /P JTSDK64_VERSION=<ver.jtsdk
 @chcp 65001 >NUL 2>&1
 @SET LANG=en_US
 
@@ -229,12 +229,16 @@ ECHO ^* Generating Doskey^'s
 IF EXIST "%cd%\%username%-doskey.cmd" (
     call "%cd%\%username%-doskey.cmd"
 )
-DOSKEY msys2 = %JTSDK_HOME%\tools\msys64\msys2_shell.cmd
+:: Python Packages
 DOSKEY jtenv = jt64env $*
+DOSKEY jtconfig = jt64config $*
 DOSKEY jtgentc = jt64gentc $*
-DOSKEY jthelp = python -c "from jt64common.help import jt64_main_help; jt64_main_help()"
-DOSKEY jtsetqt = python %JTSDK_SCRIPTS%\jt64setqt.py
+DOSKEY jtsetqt = jt64setqt $*
 DOSKEY jtversion = jt64version $*
+DOSKEY jthelp = python -c "from jt64common.help import jt64_main_help; jt64_main_help()"
+
+:: General use/purpose
+DOSKEY msys2 = %JTSDK_HOME%\tools\msys64\msys2_shell.cmd
 DOSKEY home = CD %JTSDK_HOME% $T call python -c "from jt64common.messages import main_header_message; main_header_message()"
 DOSKEY srcd = CD %JTSDK_HOME%/src
 DOSKEY clear=cls

@@ -3,13 +3,6 @@
 This repository is designed to work specifically with the
 [JTSDK64 Tools Version 3.1.0][] or later.
 
-## Documentation
-
-The project has a new [Documentation Site][] hosted on `Github.io`.
-The documents cover all aspects of the project, from
-[installation](#installaiton) to beta testing. Going forward, the documentation
-site will be the most up to date information available.
-
 ## Software Delivery
 
 Delivery is directly from the `master` branch. `Branches` are used for development

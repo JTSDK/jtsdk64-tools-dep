@@ -39,7 +39,7 @@ def main():
     screen.reset_colors()
     print("------------------------------------------------------------")
     print("\nJTSDK Variables\n")
-    print(f"  JTSDK Version ....: {env_item('JTSDK_VERSION')}")
+    print(f"  JTSDK Version ....: {env_item('JTSDK64_VERSION')}")
     print(f"  JTSDK Home .......: {env_item('JTSDK_HOME')}")
     print(f"  JTSDK Config .....: {env_item('JTSDK_CONFIG')}")
     print(f"  JTSDK Data .......: {env_item('JTSDK_DATA')}")

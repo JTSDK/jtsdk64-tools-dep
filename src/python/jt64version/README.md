@@ -3,9 +3,9 @@
 | Application Data ||
 | ---| --- |
 | Package             | `jt64version`
-| Version             | 0.0.20
+| Version             | 0.0.22
 | Topic               | Communications, Ham Radio
-| Development Status  | 4 - Beta
+| Development Status  | 5 - Production/Stable
 | Distributions       | Windows, Linux
 | Arch                | x86-64
 | Python              | Version >= 3.5

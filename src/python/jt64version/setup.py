@@ -18,7 +18,7 @@ setuptools.setup(
 
     python_requires='>=3.5.*',
     project_urls={
-        'Documentation': 'https://ki7mt.github.io/jtsdk-tools/',
+        'Documentation': 'https://ki7mt.github.io/jtsdk64-tools/',
     },
     packages=setuptools.find_packages(),
     install_requires=['colorconsole', 'jt64common'],
@@ -27,9 +27,9 @@ setuptools.setup(
     },
     classifiers=[
         "Natural Language :: English",
-        "Development Status :: 4 - Beta",
+        "Development Status :: 5 - Production/Stable",
         "Intended Audience :: Developers",
-        "Topic :: Utilities",
+        "Topic :: Communications :: Ham Radio",
         "License :: OSI Approved :: GNU General Public License v3 (GPLv3)",
         "Operating System :: POSIX :: Linux",
         "Operating System :: Microsoft :: Windows",

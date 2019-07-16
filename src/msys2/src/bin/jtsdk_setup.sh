@@ -1,6 +1,6 @@
 # script version
 AUTHOR="Greg Beam, KI7MT"
-JTSDK64_VER="3.1.0"
+JTSDK64_VER="$JTSDK64_VERSION" # interoperability variable from JTSDK64 env
 JTSDK64_NAME="JTSDK64 Tools MSYS2"
 
 # foreground colors ------------------------------------------------------------
@@ -98,7 +98,7 @@ function jtversion () {
 }
 
 # Function: Update JTSDK64 Tools MSYS2 Scripts ---------------------------------
-function jjtupdate () {
+function jtupdate () {
 
     clear ||:
     echo ''

@@ -1,7 +1,7 @@
 #!/usr/bin/bash
 #
 # Title ........: build-hamlib.sh
-# Version ......: 3.1.0 Alpha
+# Version ......: 3.1.0.2 Production
 # Description ..: Build Hamlib from G4WJS Hamlib Integration Branch
 # Project URL ..: https://github.com/KI7MT/jtsdk64-tools-scripts.git
 # Hamlib Repo ..: git://git.code.sf.net/u/bsomervi/hamlib
@@ -228,7 +228,12 @@ echo '---------------------------------------------------------------'
 echo -e ${C_Y} " RUNNING MAKE CLEAN [ $PKG_NAME ]"${C_NC}
 echo '---------------------------------------------------------------'
 echo ''
-make clean
+# Updated in v3.1.0.2 Release
+# Updated in v3.1.0.2 Release
+if [ -f "/$DRIVE/JTSDK64-Tools/config/hlclean" ]
+then
+	make clean
+fi
 
 # run make
 echo ''

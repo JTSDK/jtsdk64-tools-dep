@@ -15,6 +15,9 @@ from jt64gentc import __summary__
 base_path = os.environ["JTSDK_HOME"]
 tc_dir = os.path.join(base_path, "tools", "tcfiles")
 script_name = os.path.basename(__file__)
+home = os.environ['JTSDK_HOME']
+qthome = os.path.join(home, 'tools', 'Qt')
+available = []
 
 # Hamlib base path
 hamlib_base_path = os.path.join(base_path, "tools", "hamlib", "qt")
@@ -41,14 +44,17 @@ def supported_versions():
     """Print list of supported QT Frameworks from qt_version_dict"""
     clear()
     screen = terminal.get_terminal(conEmu=False)
-    print("---------------------------------------------")
     screen.set_color(3, 0)
-    print(f"Supported QT Frameworks")
+    print(f"\nSupported QT Frameworks\n")
     screen.reset_colors()
-    print("---------------------------------------------\n")
+    print(f"{'Version':<12} {'GCC':<10} {'Available':<10} {'Installed'}")
+    print("-" * 50)
     for k, v in qt_version_dict.items():
-        print(f" Version {k} using {v}")
-
+        path = os.path.join(qthome, k)
+        if os.path.isdir(path):
+            print(f"{k:<8} {v:<17} {'Yes':<10} {'Yes'}")
+        else:
+            print(f"{k:<8} {v:<17} {'Yes':<10} {'No'}")
 
 def main():
     """Generates Tool Chain files for each QT version in qt_version_list"""
@@ -83,8 +89,20 @@ def main():
         screen.reset_colors()
         print("------------------------------------------------------------\n")
 
-        # loop through each supported QT version adn generate TC file
-        for i in qt_version_list:
+        # find installed verisons of Qt by checking for directories
+        # TODO: move to jt64common, loop is used in jt64gentc and jt64setqt
+        if os.path.isdir(qthome):
+            for i in qt_version_list:
+                path = os.path.join(qthome, i)
+                if os.path.isdir(path):
+                    available.append(str(i))
+        else:
+            print("Qt components do not appear to be installed yet.")
+            sys.exit(0)
+
+        # loop through each supported QT version and generate TC file
+        # for testing, change the name of the Qt folder.
+        for i in available:
             time_now = datetime.datetime.now()
             print(f"* Generating TC File for QT v{i}")
             file_name = "qt" + i.replace(".", "") + ".tc"
@@ -95,15 +113,17 @@ def main():
                                  "mingw73_64", "bin")
             qtdir = qtdir.replace('\\', '/')
 
-            # Set GCCD: both 5.12.2 and 5.12.3 use GCC 730_64
+            # Set GCCD: 5.12.2, 5.12.3, 5.12.4 and 5.13.0 use GCC 730_64
             gccd = os.path.join(base_path, "tools", "Qt", "Tools",
                                 "mingw730_64", "bin")
             gccd = gccd.replace('\\', '/')
 
+            # set the hHamlib directories
             hamlib_dir = os.path.join(hamlib_base_path, i)
             hamlib_dir = hamlib_dir.replace('\\', '/')
 
             # remove file while supressing not found error
+            # TODO: move remove_file to jt64common
             with contextlib.suppress(FileNotFoundError):
                 os.remove(file)
 

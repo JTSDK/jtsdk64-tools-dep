@@ -1,6 +1,6 @@
 import os
 import setuptools
-import jt64env
+import jt64config
 
 here = os.path.dirname(os.path.abspath(__file__))
 
@@ -8,22 +8,22 @@ with open("README.md", "r") as fh:
     long_description = fh.read()
 
 setuptools.setup(
-    name=jt64env.__title__,
-    version=jt64env.__version__,
-    author=jt64env.__author__,
-    license=jt64env.__license__,
-    author_email=jt64env.__email__,
+    name=jt64config.__title__,
+    version=jt64config.__version__,
+    author=jt64config.__author__,
+    license=jt64config.__license__,
+    author_email=jt64config.__email__,
     long_description=long_description,
     long_description_content_type="text/markdown",
 
     python_requires='>=3.5.*',
     project_urls={
-        'Documentation': 'https://ki7mt.github.io/jtsdk64-tools/',
+        'Documentation': 'https://ki7mt.github.io/jtsdk64-tools',
     },
     packages=setuptools.find_packages(),
-    install_requires=['colorconsole', 'jt64common'],
+    install_requires=['colorconsole'],
     entry_points={
-        'console_scripts': ['jt64env = jt64env.__main__:main'],
+        'console_scripts': ['jt64config = jt64config.__main__:main'],
     },
     classifiers=[
         "Natural Language :: English",
@@ -37,5 +37,5 @@ setuptools.setup(
         "Programming Language :: Python :: 3.6",
         "Programming Language :: Python :: 3.7",
         ],
-    url='https://github.com/KI7MT/jtsdk64-tools/tree/master/src/python/jt64env',
+    url='https://github.com/KI7MT/jtsdk64-tools/tree/master/src/python/jt64config',
 )
